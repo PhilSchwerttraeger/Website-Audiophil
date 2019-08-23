@@ -620,3 +620,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+header {
+  background-color: #000000;
+  margin-bottom: 1.45rem;
+}
+
+.header-container {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 1.45rem 1.0875rem;
+}
+
+nav {
+  color: white;
+}
+
+.container-body {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+}
