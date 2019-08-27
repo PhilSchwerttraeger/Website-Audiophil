@@ -1,6 +1,6 @@
 // var
 $primary: white;
-$secondary: red;
+$secondary: #a3cde6;
 $background: black;
 $overlay: #225470;
 
@@ -31,6 +31,7 @@ nav{
   top: 0;
   width: 100%;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, .1);
 }
 
 .navList {
@@ -40,11 +41,12 @@ nav{
   padding-inline-start: 0;
   z-index: 2;
   overflow: hidden;
-  margin: 30px 50px 10px 0px;
-  max-width: 1200px;
+  margin: 26px 50px 26px;
+  max-width: 1800px;
 }
 
 .navItem {
+  font-size: 1.1rem;
   color: $primary;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -52,6 +54,10 @@ nav{
 }
 
 .navItem:hover {
+  color: $secondary;
+}
+
+.navItem:active {
   color: $secondary;
 }
 
@@ -106,13 +112,29 @@ nav{
 }
 
 .headerContent h1{
-  font-size: 2rem;
   margin-bottom: 0;
 }
 
 .headerContent p{
-  font-size: 1.1rem;
   display: block;
   text-align: center;
   color: $primary;
+}
+
+@media screen and (min-width: 960px){
+  .headerContent h1{
+    font-size: 52px;
+  }
+  .headerContent p{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 960px){
+  .headerContent h1{
+    font-size: 36px;
+  }
+  .headerContent p{
+    font-size: 20px;
+  }
 }
