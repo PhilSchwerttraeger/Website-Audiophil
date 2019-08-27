@@ -13,19 +13,19 @@ const Header = ({ siteTitle }) => (
     </h1>
 
     <nav>
-      <ul>
+      <ul className={headerStyles.navList}>
         <li>
-          <Link className={headerStyles.link} to="/">
+          <Link className={headerStyles.navItem} to="/">
             Home
           </Link>
         </li>
         <li>
-          <Link className={headerStyles.link} to="/blog">
+          <Link className={headerStyles.navItem} to="/blog">
             Blog
           </Link>
         </li>
         <li>
-          <Link className={headerStyles.link} to="/contact">
+          <Link className={headerStyles.navItem} to="/contact">
             Kontakt
           </Link>
         </li>
