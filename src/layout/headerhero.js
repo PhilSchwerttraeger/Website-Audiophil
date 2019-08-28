@@ -45,6 +45,9 @@ const HeroHeader = ({ siteTitle }) => (
       <p>work in progress</p>
     </div>
 
+    <div className={headerHeroStyles.section07}>
+      <a href="#firstsection"><span></span><span></span><span></span></a>
+    </div>
 
   </header>
 )
