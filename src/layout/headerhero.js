@@ -5,6 +5,33 @@ import React from "react"
 import headerHeroStyles from "./headerhero.module.scss"
 
 import video from "../videos/rotation.mp4"
+import fb from "../images/fb.png"
+import tw from "../images/tw.png"
+import ig from "../images/ig.png"
+import yt from "../images/yt.png"
+
+const socialmedia = [
+  {
+    name: "facebook",
+    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    icon: fb
+  },
+  {
+    name: "twitter",
+    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    icon: tw
+  },
+  {
+    name: "instagram",
+    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    icon: ig
+  },
+  {
+    name: "youtube",
+    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    icon: yt
+  }
+]
 
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerHeroStyles.heroHeader}>
@@ -35,6 +62,15 @@ const HeroHeader = ({ siteTitle }) => (
         </li>
       </ul>
     </nav>
+        <div className={headerHeroStyles.socialContainer}>
+          {socialmedia.map(social => {
+            return (
+              <a href={social.url} target="_blank" rel="noopener noreferrer">
+                <img className={headerHeroStyles.icon} src={social.icon} alt={social.name}></img>
+              </a>
+            )
+          })}
+        </div>
 
     <div className={headerHeroStyles.headerContent}>
       <h1>
