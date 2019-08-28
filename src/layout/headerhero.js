@@ -48,6 +48,14 @@ const HeroHeader = ({ siteTitle }) => (
         <li>
           <Link className={headerHeroStyles.navItem} to="/">
             Home
+        <div className={headerHeroStyles.logo}>
+          <div className={headerHeroStyles.logoRow1}>
+            audiophil
+          </div>
+          <div className={headerHeroStyles.logoRow2}>
+            music production
+          </div>
+        </div>
           </Link>
         </li>
         <li>
