@@ -43,11 +43,8 @@ const HeroHeader = ({ siteTitle }) => (
 
     <div className={headerHeroStyles.headerOverlay}></div>
 
-    <nav>
-      <ul className={headerHeroStyles.navList}>
-        <li>
-          <Link className={headerHeroStyles.navItem} to="/">
-            Home
+    <div className={headerHeroStyles.topBar}>
+      <div className={headerHeroStyles.topBarContainer}>
         <div className={headerHeroStyles.logo}>
           <div className={headerHeroStyles.logoRow1}>
             audiophil
@@ -56,20 +53,25 @@ const HeroHeader = ({ siteTitle }) => (
             music production
           </div>
         </div>
+
+        <ul className={headerHeroStyles.navList}>
+          <li>
+            <Link className={headerHeroStyles.navItem} to="/">
+              Home
           </Link>
-        </li>
-        <li>
-          <Link className={headerHeroStyles.navItem} to="/blog">
-            Blog
+          </li>
+          <li>
+            <Link className={headerHeroStyles.navItem} to="/blog">
+              Blog
           </Link>
-        </li>
-        <li>
-          <Link className={headerHeroStyles.navItem} to="/contact">
-            Kontakt
+          </li>
+          <li>
+            <Link className={headerHeroStyles.navItem} to="/contact">
+              Kontakt
           </Link>
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+
         <div className={headerHeroStyles.socialContainer}>
           {socialmedia.map(social => {
             return (
@@ -79,6 +81,8 @@ const HeroHeader = ({ siteTitle }) => (
             )
           })}
         </div>
+      </div>
+    </div>
 
     <div className={headerHeroStyles.headerContent}>
       <h1>
