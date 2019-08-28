@@ -8,6 +8,11 @@ import Footer from "./footer"
 import layoutStyles from "./layout.module.scss"
 
 const Layout = ({ children, type }) => {
+  if (typeof window !== 'undefined') {
+    // Make scroll behavior of internal links smooth
+    require('smooth-scroll')('a[href*="#"]');
+  }
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
