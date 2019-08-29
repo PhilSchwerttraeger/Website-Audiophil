@@ -23,6 +23,8 @@ $overlay: #1d455c;
   text-decoration: none;
 }
 
+// Top Bar (brighter background)
+
 .topBar{
   position: absolute;
   z-index: 2;
@@ -38,12 +40,15 @@ $overlay: #1d455c;
 .topBarContainer{
   max-width: 1600px;
   flex-grow: 1;
-  padding: 24px;
+  padding: 24px 46px;
   
   display: flex;
 }
 
+// Logo
+
 .logo{
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,12 +58,13 @@ $overlay: #1d455c;
 .logoRow1{
   font-size: 34px;
   font-weight: bold;
-  
 }
 
 .logoRow2{
   font-size: 18px;
 }
+
+// Social media icons in top bar
 
 .socialContainer{
   margin: auto;
@@ -71,6 +77,12 @@ $overlay: #1d455c;
   margin-left: 12px;
 }
 
+.icon:hover{
+  color: $secondary;
+}
+
+// Navigation
+
 .navList {
   flex-grow: 2;
   display: flex;
@@ -79,7 +91,7 @@ $overlay: #1d455c;
   padding-inline-start: 0;
   z-index: 2;
   overflow: hidden;
-  margin: 26px 50px 26px;
+  margin: auto;
 }
 
 .navItem {
@@ -90,21 +102,37 @@ $overlay: #1d455c;
   margin-left: 25px;
 }
 
-@media all and (max-width: 600px) {
-  .navList {
-    visibility: hidden;
-  }
-  .navItem {
-    margin-left: 0px;
-  }
-}
-
 .navItem:hover {
   color: $secondary;
 }
 
 .navItem:active {
   color: $secondary;
+}
+
+.spacer, .menu{
+  display: none;
+}
+
+@media all and (max-width: 600px) {
+  .spacer{
+    display: flex;
+    flex-grow: 2;
+  }
+  .socialContainer{
+    display: none;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .navList {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    margin: auto;
+    align-content: center;
+  }
 }
 
 .fullscreenVideoWrap{
@@ -152,7 +180,7 @@ $overlay: #1d455c;
 .headerContent{
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
 }

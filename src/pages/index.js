@@ -10,10 +10,19 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout type="hero">
     <SEO title="Home" />
-    <h1>Will.</h1>
-    <p>
-      Go to <Link to="/blog">Blog</Link>
-    </p>
+    <section id="firstsection">
+      <h1>Willkommen</h1>
+      <p>
+        Go to <Link to="/blog">Blog</Link>
+      </p>
+    </section>
+
+    <section>
+      <h1>Willkommen</h1>
+      <p>
+        Go to <Link to="/blog">Blog</Link>
+      </p>
+    </section>
   </Layout >
 )
 

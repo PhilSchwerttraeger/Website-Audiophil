@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import MobileMenu from "./mobilemenu"
 
 import headerHeroStyles from "./headerhero.module.scss"
 
@@ -9,6 +10,7 @@ import fb from "../images/fb.png"
 import tw from "../images/tw.png"
 import ig from "../images/ig.png"
 import yt from "../images/yt.png"
+//import hamburger from "../images/hamburger.png"
 
 const socialmedia = [
   {
@@ -52,6 +54,12 @@ const HeroHeader = ({ siteTitle }) => (
           <div className={headerHeroStyles.logoRow2}>
             music production
           </div>
+        </div>
+
+        <div className={headerHeroStyles.spacer}></div>
+
+        <div className={headerHeroStyles.menu}>
+          <MobileMenu />
         </div>
 
         <ul className={headerHeroStyles.navList}>
