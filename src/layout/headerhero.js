@@ -20,17 +20,17 @@ const socialmedia = [
   },
   {
     name: "twitter",
-    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    url: "https://twitter.com/audiophil_",
     icon: tw
   },
   {
     name: "instagram",
-    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    url: "https://www.instagram.com/flippazoid/",
     icon: ig
   },
   {
     name: "youtube",
-    url: "https://www.facebook.com/pg/audiophil.musicproduction",
+    url: "https://www.youtube.com/channel/UCFXHUOqNlbU1AccXNPWju6A",
     icon: yt
   }
 ]
@@ -107,12 +107,12 @@ const HeroHeader = ({ siteTitle }) => (
     </div >
 
     <div className={headerHeroStyles.headerContent}>
-      <h1>
-        <Link to="/" className={headerHeroStyles.title}>
+      <Link to="/" className={headerHeroStyles.title}>
+        <h1>
           {siteTitle} 2.0
-        </Link>
       </h1>
-      <p>work in progress</p>
+        <p>work in progress</p>
+      </Link>
     </div>
 
     <div className={headerHeroStyles.section07}>
