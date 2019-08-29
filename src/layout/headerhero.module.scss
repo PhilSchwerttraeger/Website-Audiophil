@@ -13,6 +13,10 @@
   text-decoration: none;
 }
 
+.title:hover {
+  opacity: 0.6;
+}
+
 // Top Bar (brighter background)
 
 .topBar{
@@ -219,7 +223,7 @@
 
 
 .section07 {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: 85vh;
   left: 50%;

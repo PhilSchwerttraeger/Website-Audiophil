@@ -23,10 +23,6 @@ html {
   transition: all 0.3s ease 0s;
 }
 
-.title:hover {
-  color: $secondary;
-}
-
 .navList {
   display: flex;
   flex-direction: row;
@@ -77,6 +73,10 @@ html {
   z-index: 2;
   margin-left: auto;
   margin-right: auto;
+}
+
+.headerContent:hover {
+  color: $secondary;
 }
 
 .headerContent h1{

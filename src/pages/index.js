@@ -12,9 +12,9 @@ import layoutStyles from "../layout/layout.module.scss"
 const IndexPage = () => (
   <Layout type="hero">
     <SEO title="Home" />
-    <section id="firstsection">
+    <section>
       <div className={layoutStyles.contentWrap}>
-        <h2 className={layoutStyles.contentTitle}>
+        <h2 className={layoutStyles.contentTitle} id="firstsection">
           Hallo Internet!
         </h2>
         <div className={layoutStyles.contentText}>
