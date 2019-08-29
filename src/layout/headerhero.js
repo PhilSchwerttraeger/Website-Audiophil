@@ -47,14 +47,16 @@ const HeroHeader = ({ siteTitle }) => (
 
     <div className={headerHeroStyles.topBar}>
       <div className={headerHeroStyles.topBarContainer}>
-        <div className={headerHeroStyles.logo}>
-          <div className={headerHeroStyles.logoRow1}>
-            audiophil
+        <Link to="/" className={headerHeroStyles.unstyledLink}>
+          <div className={headerHeroStyles.logo}>
+            <div className={headerHeroStyles.logoRow1}>
+              audiophil
+            </div>
+            <div className={headerHeroStyles.logoRow2}>
+              music production
+            </div>
           </div>
-          <div className={headerHeroStyles.logoRow2}>
-            music production
-          </div>
-        </div>
+        </Link>
 
         <div className={headerHeroStyles.spacer}></div>
 
@@ -64,17 +66,29 @@ const HeroHeader = ({ siteTitle }) => (
 
         <ul className={headerHeroStyles.navList}>
           <li>
-            <Link className={headerHeroStyles.navItem} to="/">
+            <Link
+              className={headerHeroStyles.navItem}
+              to="/"
+              activeStyle={{ textDecoration: "underline" }}
+            >
               Home
           </Link>
           </li>
           <li>
-            <Link className={headerHeroStyles.navItem} to="/blog">
+            <Link
+              className={headerHeroStyles.navItem}
+              to="/blog"
+              activeStyle={{ textDecoration: "underline" }}
+            >
               Blog
           </Link>
           </li>
           <li>
-            <Link className={headerHeroStyles.navItem} to="/contact">
+            <Link
+              className={headerHeroStyles.navItem}
+              to="/contact"
+              activeStyle={{ textDecoration: "underline" }}
+            >
               Kontakt
           </Link>
           </li>
@@ -90,7 +104,7 @@ const HeroHeader = ({ siteTitle }) => (
           })}
         </div>
       </div>
-    </div>
+    </div >
 
     <div className={headerHeroStyles.headerContent}>
       <h1>
@@ -105,7 +119,7 @@ const HeroHeader = ({ siteTitle }) => (
       <a href="#firstsection"><span></span><span></span><span></span></a>
     </div>
 
-  </header>
+  </header >
 )
 
 HeroHeader.propTypes = {
