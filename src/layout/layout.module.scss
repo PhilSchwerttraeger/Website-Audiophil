@@ -16,9 +16,85 @@ main {
   background-color: red;
 }
 
+.contentWrap {
+  max-width: 1400px;
+  margin: auto;
+}
+
 section {
   flex-grow: 1;
   margin: auto;
   padding: 50px 30px;
   background-color: #fff;
+}
+
+.contentTitle {
+  padding: 100px 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+}
+
+.contentText {
+  columns: 2;
+  column-gap: 2em;
+  font-size: 18px;
+}
+
+.contentText p {
+  margin-bottom: 10px;
+}
+
+@media(max-width: 500px){
+
+  .contentTitle {
+    font-size: 39px;
+    padding: 60px 0px;
+  }
+  .contentText {
+    columns: 1;
+    font-size: 16px;
+  }
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 15px 50px;
+  margin: 30px 0px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $primary;
+  background-color: $ternary;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: $secondary;
+  transition: 0.5s;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 20px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
