@@ -263,7 +263,9 @@ const IndexPage = () => (
     {/* SECTION E: CALL TO ACTION */}
     <section>
       <div className={layoutStyles.contentWrap}>
-        <h2 id="section-e">Und?</h2>
+        <h2 id="section-e" style={{ padding: 0 }}>
+          Und?
+        </h2>
         <h3 className={layoutStyles.question}>Lust was zusammen zu machen?</h3>
         <div className={layoutStyles.centered}>
           <Link to="/blog">

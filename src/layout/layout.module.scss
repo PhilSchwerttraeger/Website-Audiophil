@@ -36,8 +36,14 @@ section {
   font-size: 52px;
 }
 
+@media (max-width: 450px) {
+  .contentWrap h2 {
+    font-size: 32px;
+    padding: 76px 0px;
+  }
+}
+
 .question {
-  margin-top: -100px;
   width: 100%;
   text-align: center;
   font-size: 30px;

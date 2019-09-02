@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import MobileMenu from "./mobilemenu"
 
-import headerHeroStyles from "./headerhero.module.scss"
+import headerStyles from "./header.module.scss"
 
 import video from "../videos/rotation.mp4"
 import fb from "../images/fb.png"
@@ -36,34 +36,34 @@ const socialmedia = [
 ]
 
 const HeroHeader = ({ siteTitle }) => (
-  <header className={headerHeroStyles.heroHeader}>
-    <div className={headerHeroStyles.fullscreenVideoWrap}>
+  <header className={headerStyles.heroHeader}>
+    <div className={headerStyles.fullscreenVideoWrap}>
       <video autoPlay muted loop>
         <source src={video} type="video/mp4" />
       </video>
     </div>
 
-    <div className={headerHeroStyles.headerOverlay}></div>
+    <div className={headerStyles.headerOverlay}></div>
 
-    <div className={headerHeroStyles.topBar}>
-      <div className={headerHeroStyles.topBarContainer}>
-        <Link to="/" className={headerHeroStyles.unstyledLink}>
-          <div className={headerHeroStyles.logo}>
-            <div className={headerHeroStyles.logoRow1}>audiophil</div>
-            <div className={headerHeroStyles.logoRow2}>music production</div>
+    <div className={headerStyles.topBarHero}>
+      <div className={headerStyles.topBarContainer}>
+        <Link to="/" className={headerStyles.unstyledLink}>
+          <div className={headerStyles.logo}>
+            <div className={headerStyles.logoRow1}>audiophil</div>
+            <div className={headerStyles.logoRow2}>music production</div>
           </div>
         </Link>
 
-        <div className={headerHeroStyles.spacer}></div>
+        <div className={headerStyles.spacer}></div>
 
-        <div className={headerHeroStyles.menu}>
+        <div className={headerStyles.menu}>
           <MobileMenu />
         </div>
 
-        <ul className={headerHeroStyles.navList}>
+        <ul className={headerStyles.navList}>
           <li>
             <Link
-              className={headerHeroStyles.navItem}
+              className={headerStyles.navItem}
               to="/"
               activeStyle={{ textDecoration: "underline" }}
             >
@@ -72,7 +72,7 @@ const HeroHeader = ({ siteTitle }) => (
           </li>
           <li>
             <Link
-              className={headerHeroStyles.navItem}
+              className={headerStyles.navItem}
               to="/blog"
               activeStyle={{ textDecoration: "underline" }}
             >
@@ -81,7 +81,7 @@ const HeroHeader = ({ siteTitle }) => (
           </li>
           <li>
             <Link
-              className={headerHeroStyles.navItem}
+              className={headerStyles.navItem}
               to="/contact"
               activeStyle={{ textDecoration: "underline" }}
             >
@@ -90,12 +90,12 @@ const HeroHeader = ({ siteTitle }) => (
           </li>
         </ul>
 
-        <div className={headerHeroStyles.socialContainer}>
+        <div className={headerStyles.socialContainer}>
           {socialmedia.map(social => {
             return (
               <a href={social.url} target="_blank" rel="noopener noreferrer">
                 <img
-                  className={headerHeroStyles.icon}
+                  className={headerStyles.icon}
                   src={social.icon}
                   alt={social.name}
                 ></img>
@@ -106,14 +106,14 @@ const HeroHeader = ({ siteTitle }) => (
       </div>
     </div>
 
-    <div className={headerHeroStyles.headerContent}>
-      <Link to="/" className={headerHeroStyles.title}>
+    <div className={headerStyles.headerContent}>
+      <Link to="/" className={headerStyles.title}>
         <h1>{siteTitle} 2.0</h1>
         <p>work in progress</p>
       </Link>
     </div>
 
-    <div className={headerHeroStyles.section07}>
+    <div className={headerStyles.section07}>
       <a href="#section-a">
         <span></span>
         <span></span>
