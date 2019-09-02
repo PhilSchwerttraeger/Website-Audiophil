@@ -43,9 +43,34 @@ const hardNumbers = [
   },
 ]
 
+const disciplines = [
+  {
+    title: "Schalldämmung",
+    text:
+      "Durch unsere spezielle Raum-in-Raum-Konstruktion erreichen wir sehr hohe akustische Dämmwerte, welche eine ideale Aufnahme- und Abhörumgebung schafft.",
+  },
+  {
+    title: "Variable Akustik",
+    text:
+      "Diverse selbst entwickelte Akustikelemente schaffen eine flexible Raumakustik, die sich an alle künstlerischen Anforderungen anpasst.",
+  },
+  {
+    title: "LED und Sternerdung",
+    text:
+      "Um möglichst viele Störeinflüsse wie elektrische Felder und Surren von Netzteilen zu eliminieren, setzen wir u.a. konsequent auf LED-Beleuchtung mit Niedervoltspeisung und eine separate Sternerdung aller Studiogeräte.",
+  },
+  {
+    title: "Smarte Gebäudetechnik",
+    text:
+      "Das Gebäude ist voll vernetzt und bietet daher viele Vorzüge, beispielsweise voll-automatisierte Regelung von Lüftung, Klima, Heizung oder auch Licht.",
+  },
+]
+
 const IndexPage = () => (
   <Layout type="hero">
     <SEO title="Home" />
+
+    {/* SECTION A: WELCOME */}
     <section>
       <div className={layoutStyles.contentWrap}>
         <h2 className={layoutStyles.contentTitle} id="firstsection">
@@ -92,6 +117,7 @@ const IndexPage = () => (
       </div>
     </section>
 
+    {/* SECTION B: FEATURES */}
     <section>
       <div
         className={layoutStyles.contentWrap}
@@ -99,6 +125,7 @@ const IndexPage = () => (
           backgroundImage: `url(${patch})`,
           backgroundSize: "auto 100%",
           backgroundRepeat: "no-repeat",
+          borderRadius: "25px",
         }}
       >
         <h2 className={layoutStyles.featuresTitle} id="firstsection">
@@ -109,18 +136,54 @@ const IndexPage = () => (
           justify="center"
           className={layoutStyles.featureContainer}
         >
-          {hardNumbers.map(card => {
+          {hardNumbers.map(item => {
             return (
               <Grid item xs={12} sm={6} md={3} className={layoutStyles.feature}>
                 <div className={layoutStyles.card}>
-                  <h3>{card.title}</h3>
-                  <h4>{card.subtitle}</h4>
-                  <p>{card.text}</p>
+                  <h3>{item.title}</h3>
+                  <h4>{item.subtitle}</h4>
+                  <p>{item.text}</p>
                 </div>
               </Grid>
             )
           })}
         </Grid>
+      </div>
+    </section>
+
+    {/* SECTION C: DREAM */}
+    <section>
+      <div className={layoutStyles.contentWrap}>
+        <h2 className={layoutStyles.contentTitle} id="firstsection">
+          Was lange währt, wird endlich gut.
+        </h2>
+        <div className={layoutStyles.contentText}>
+          <p>
+            Kaum zu glauben, aber bereits Anfang 2014 begann dieses Projekt.
+            Seitdem hat sich vieles verändert. Aus einem anfangs kleinen Anbau
+            ist mittlerweile ein autarkes Gebäude geworden. Auch die technischen
+            Anforderungen wuchsen mit der Zeit, sodass der Bau bauakustisch nun
+            sogar aller höchste Ansprüche erfüllt.
+          </p>
+          <p>
+            Eigentlich können wir froh sein, dass es die initiale Idee bzw.
+            Planung nicht geworden ist. Mit der Zeit habe ich nämlich enorm viel
+            gelernt. Nur durch das mehrfache Planen und immer wieder
+            Durchdenken, Rekapitulieren und Revalidieren verschiedener Aspekte
+            konnte das jetzige Studio entstehen.
+          </p>
+        </div>
+
+        <div className={layoutStyles.contentText}>
+          {disciplines.map(item => {
+            return (
+              <div className={layoutStyles.discipline}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   </Layout>
