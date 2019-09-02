@@ -5,7 +5,6 @@ import MobileMenu from "./mobilemenu"
 
 import headerStyles from "./header.module.scss"
 
-import video from "../videos/rotation.mp4"
 import fb from "../images/fb.png"
 import tw from "../images/tw.png"
 import ig from "../images/ig.png"
