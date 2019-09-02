@@ -16,23 +16,23 @@ const socialmedia = [
   {
     name: "facebook",
     url: "https://www.facebook.com/pg/audiophil.musicproduction",
-    icon: fb
+    icon: fb,
   },
   {
     name: "twitter",
     url: "https://twitter.com/audiophil_",
-    icon: tw
+    icon: tw,
   },
   {
     name: "instagram",
     url: "https://www.instagram.com/flippazoid/",
-    icon: ig
+    icon: ig,
   },
   {
     name: "youtube",
     url: "https://www.youtube.com/channel/UCFXHUOqNlbU1AccXNPWju6A",
-    icon: yt
-  }
+    icon: yt,
+  },
 ]
 
 const HeroHeader = ({ siteTitle }) => (
@@ -49,12 +49,8 @@ const HeroHeader = ({ siteTitle }) => (
       <div className={headerHeroStyles.topBarContainer}>
         <Link to="/" className={headerHeroStyles.unstyledLink}>
           <div className={headerHeroStyles.logo}>
-            <div className={headerHeroStyles.logoRow1}>
-              audiophil
-            </div>
-            <div className={headerHeroStyles.logoRow2}>
-              music production
-            </div>
+            <div className={headerHeroStyles.logoRow1}>audiophil</div>
+            <div className={headerHeroStyles.logoRow2}>music production</div>
           </div>
         </Link>
 
@@ -72,7 +68,7 @@ const HeroHeader = ({ siteTitle }) => (
               activeStyle={{ textDecoration: "underline" }}
             >
               Home
-          </Link>
+            </Link>
           </li>
           <li>
             <Link
@@ -81,7 +77,7 @@ const HeroHeader = ({ siteTitle }) => (
               activeStyle={{ textDecoration: "underline" }}
             >
               Blog
-          </Link>
+            </Link>
           </li>
           <li>
             <Link
@@ -90,7 +86,7 @@ const HeroHeader = ({ siteTitle }) => (
               activeStyle={{ textDecoration: "underline" }}
             >
               Kontakt
-          </Link>
+            </Link>
           </li>
         </ul>
 
@@ -98,36 +94,41 @@ const HeroHeader = ({ siteTitle }) => (
           {socialmedia.map(social => {
             return (
               <a href={social.url} target="_blank" rel="noopener noreferrer">
-                <img className={headerHeroStyles.icon} src={social.icon} alt={social.name}></img>
+                <img
+                  className={headerHeroStyles.icon}
+                  src={social.icon}
+                  alt={social.name}
+                ></img>
               </a>
             )
           })}
         </div>
       </div>
-    </div >
+    </div>
 
     <div className={headerHeroStyles.headerContent}>
       <Link to="/" className={headerHeroStyles.title}>
-        <h1>
-          {siteTitle} 2.0
-      </h1>
+        <h1>{siteTitle} 2.0</h1>
         <p>work in progress</p>
       </Link>
     </div>
 
     <div className={headerHeroStyles.section07}>
-      <a href="#firstsection"><span></span><span></span><span></span></a>
+      <a href="#section-a">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </div>
-
-  </header >
+  </header>
 )
 
 HeroHeader.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 HeroHeader.defaultProps = {
-  siteTitle: ""
+  siteTitle: "",
 }
 
 export default HeroHeader

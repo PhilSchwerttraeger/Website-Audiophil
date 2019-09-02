@@ -100,9 +100,7 @@ const IndexPage = () => (
     {/* SECTION A: WELCOME */}
     <section>
       <div className={layoutStyles.contentWrap}>
-        <h2 className={layoutStyles.contentTitle} id="firstsection">
-          Hallo Internet!
-        </h2>
+        <h2 id="section-a">Hallo Internet!</h2>
         <div className={layoutStyles.contentText}>
           <p>
             Seitdem ich denken kann begeistere ich mich für Musik und Technik.
@@ -155,7 +153,7 @@ const IndexPage = () => (
           borderRadius: "25px",
         }}
       >
-        <h2 className={layoutStyles.featuresTitle} id="firstsection">
+        <h2 className={layoutStyles.featuresTitle} id="section-b">
           Harte Zahlen
         </h2>
         <Grid
@@ -181,9 +179,7 @@ const IndexPage = () => (
     {/* SECTION C: DREAM */}
     <section>
       <div className={layoutStyles.contentWrap}>
-        <h2 className={layoutStyles.contentTitle} id="firstsection">
-          Was lange währt, wird endlich gut.
-        </h2>
+        <h2 id="section-c">Was lange währt, wird endlich gut.</h2>
         <div className={layoutStyles.contentText}>
           <p>
             Kaum zu glauben, aber bereits Anfang 2014 begann dieses Projekt.
@@ -216,8 +212,8 @@ const IndexPage = () => (
       </div>
     </section>
 
-    {/* SECTION C: Hard Numbers 2 */}
-    <section>
+    {/* SECTION D: Hard Numbers 2 */}
+    <section id="section-d">
       <div
         className={layoutStyles.contentWrap}
         style={{
@@ -250,7 +246,7 @@ const IndexPage = () => (
 
           <Grid item xs={12} lg={6}>
             <div className={layoutStyles.sideFacts}>
-              <h2 id="firstsection">
+              <h2>
                 Viel hilft viel: <br /> Ein Projekt der großen Zahlen
               </h2>
               <p>
@@ -261,6 +257,21 @@ const IndexPage = () => (
             </div>
           </Grid>
         </Grid>
+      </div>
+    </section>
+
+    {/* SECTION E: CALL TO ACTION */}
+    <section>
+      <div className={layoutStyles.contentWrap}>
+        <h2 id="section-e">Und?</h2>
+        <h3 className={layoutStyles.question}>Lust was zusammen zu machen?</h3>
+        <div className={layoutStyles.centered}>
+          <Link to="/blog">
+            <button type="button" className={layoutStyles.button}>
+              <span>Kontakt</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   </Layout>
