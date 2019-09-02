@@ -66,6 +66,33 @@ const disciplines = [
   },
 ]
 
+const hardNumbers2 = [
+  {
+    value: "8.100 kg",
+    unit: "Konstruktionsvollholz",
+  },
+  {
+    value: "1.600 m",
+    unit: "Konstruktionsvollholz",
+  },
+  {
+    value: "9.300 kg",
+    unit: "Gipskarton & OSB",
+  },
+  {
+    value: "11.000",
+    unit: "Schrauben & Nägel",
+  },
+  {
+    value: "2.400 m",
+    unit: "Elektrokabel",
+  },
+  {
+    value: "22 l",
+    unit: "Akustikkleber",
+  },
+]
+
 const IndexPage = () => (
   <Layout type="hero">
     <SEO title="Home" />
@@ -184,6 +211,56 @@ const IndexPage = () => (
             )
           })}
         </div>
+
+        <div style={{ marginBottom: "100px" }}></div>
+      </div>
+    </section>
+
+    {/* SECTION C: Hard Numbers 2 */}
+    <section>
+      <div
+        className={layoutStyles.contentWrap}
+        style={{
+          backgroundImage: `url(${patch})`,
+          backgroundSize: "auto 100%",
+          backgroundRepeat: "no-repeat",
+          borderRadius: "25px",
+          paddingTop: "50px",
+        }}
+      >
+        <Grid container>
+          <Grid item xs={12} lg={6}>
+            <Grid
+              container
+              justify="center"
+              className={layoutStyles.factsContainer}
+            >
+              {hardNumbers2.map(item => {
+                return (
+                  <Grid item xs={12} sm={6} className={layoutStyles.fact}>
+                    <div className={layoutStyles.card2}>
+                      <h3>{item.value}</h3>
+                      <h4>{item.unit}</h4>
+                    </div>
+                  </Grid>
+                )
+              })}
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
+            <div className={layoutStyles.sideFacts}>
+              <h2 id="firstsection">
+                Viel hilft viel: <br /> Ein Projekt der großen Zahlen
+              </h2>
+              <p>
+                Nicht nur von der schieren Masse an verschiedenen Disziplinen,
+                die es beim Studiobau zu beachten gilt, sondern auch von der
+                schieren Masse an... Masse ist dieses Projekt einfach riesig.
+              </p>
+            </div>
+          </Grid>
+        </Grid>
       </div>
     </section>
   </Layout>

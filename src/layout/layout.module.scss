@@ -166,3 +166,77 @@ section {
   display: inline-block;
   margin-bottom: 10px;
 }
+
+.sideFacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: $primary;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.sideFacts h2 {
+  padding: 0px 0px 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+  color: $primary;
+}
+
+.sideFacts p {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.factsContainer {
+  display: flex;
+  max-width: 1280px;
+  margin-bottom: 50px;
+  padding: 20px 50px;
+}
+
+@media (max-width: 1280px) {
+  .sideFacts {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 450px) {
+  .sideFacts h2 {
+    font-size: 30px;
+  }
+  .factsContainer {
+    padding: 20px 20px;
+  }
+  .sideFacts p {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+}
+
+.fact {
+  padding: 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+}
+
+.card2 {
+  margin: 10px;
+
+  border-radius: 25px;
+  background-color: $primary;
+}
+
+.fact h3 {
+  padding-top: 30px;
+  font-size: 42px;
+}
+
+.fact h4 {
+  padding-bottom: 30px;
+  font-weight: normal;
+  font-size: 18px;
+}
