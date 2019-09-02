@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import layoutStyles from "../layout/layout.module.scss"
 
 import patch from "../images/patch.png"
+import Grid from "@material-ui/core/Grid"
 
 const hardNumbers = [
   {
@@ -20,12 +21,14 @@ const hardNumbers = [
     text:
       "Für ein großes Raumvolumen, besser verteilte Raummoden und natürlich die Möglichkeit flexibel auch mal von oben zu mikrofonieren.",
   },
+  /*
   {
     title: "5",
     subtitle: "Räume",
     text:
       "Aufnahmeraum, Regieraum, Lobby bzw. Eingangsbereich mit Küchenzeile, ein kleines WC und ein Hausanschlussraum",
   },
+  */
   {
     title: "620 m²",
     subtitle: "Außenanlage",
@@ -90,25 +93,34 @@ const IndexPage = () => (
     </section>
 
     <section>
-      <h2 className={layoutStyles.contentTitle} id="firstsection">
-        Harte Zahlen
-      </h2>
-      <div className={layoutStyles.featureContainer}>
-        {hardNumbers.map(card => {
-          return (
-            <div>
-              <h3>{card.title}</h3>
-              <h4>{card.subtitle}</h4>
-              <p>{card.text}</p>
-            </div>
-          )
-        })}
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <img src={patch} style={{ objectFit: "cover" }}></img>
+      <div
+        className={layoutStyles.contentWrap}
+        style={{
+          backgroundImage: `url(${patch})`,
+          backgroundSize: "auto 100%",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <h2 className={layoutStyles.featuresTitle} id="firstsection">
+          Harte Zahlen
+        </h2>
+        <Grid
+          container
+          justify="center"
+          className={layoutStyles.featureContainer}
+        >
+          {hardNumbers.map(card => {
+            return (
+              <Grid item xs={12} sm={6} md={3} className={layoutStyles.feature}>
+                <div className={layoutStyles.card}>
+                  <h3>{card.title}</h3>
+                  <h4>{card.subtitle}</h4>
+                  <p>{card.text}</p>
+                </div>
+              </Grid>
+            )
+          })}
+        </Grid>
       </div>
     </section>
   </Layout>
