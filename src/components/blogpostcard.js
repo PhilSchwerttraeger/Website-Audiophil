@@ -2,7 +2,7 @@ import React from "react"
 import postStyles from "../layout/blogpost.module.scss"
 import { Link } from "@material-ui/core"
 
-const BlogPost = data => {
+const BlogPostCard = data => {
   const { title, date, category, excerpt, image, url } = data.data
 
   return (
@@ -32,4 +32,4 @@ const BlogPost = data => {
   )
 }
 
-export default BlogPost
+export default BlogPostCard

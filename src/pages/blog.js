@@ -10,7 +10,7 @@ import blog_image1 from "../images/blog_image1.jpg"
 import blog_image2 from "../images/blog_image2.jpg"
 import blog_image3 from "../images/blog_image3.jpg"
 
-import BlogPost from "../components/blogpost.js"
+import BlogPostCard from "../components/blogpostcard.js"
 
 /*
 const posts = [
@@ -56,7 +56,10 @@ const BlogPage = () => {
             frontmatter{
               title
               date
+              category
+              excerpt
             }
+            id
           }
         }
       }
@@ -70,7 +73,11 @@ const BlogPage = () => {
       <SEO title="Blog" />
       <section>
         <h1>Blog</h1>
-        <Grid container spacing={3}></Grid>
+        <Grid container spacing={3}>
+          {posts.allMarkdownRemark.edges.map(post => {
+            return <BlogPostCard key={post.node.id} data={post.node.frontmatter} />
+          })}
+        </Grid>
       </section>
     </Layout>
   )
