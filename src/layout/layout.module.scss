@@ -13,10 +13,6 @@
   min-height: 100vh;
 }
 
-main {
-  background-color: red;
-}
-
 .contentWrap {
   max-width: 1280px;
   margin: auto;
@@ -25,7 +21,7 @@ main {
 section {
   flex-grow: 1;
   margin: auto;
-  padding: 50px 30px;
+  padding: 50px 10px;
   background-color: #fff;
 }
 
@@ -39,7 +35,7 @@ section {
 @media (max-width: 450px) {
   .contentWrap h2 {
     font-size: 32px;
-    padding: 76px 0px;
+    padding: 30px 0px;
   }
 }
 
@@ -122,7 +118,8 @@ section {
 
 @media (max-width: 450px) {
   .featureContainer {
-    padding: 20px 20px;
+    padding: 0px 0px 0px;
+    margin-bottom: 0px;
   }
 }
 
@@ -153,6 +150,13 @@ section {
   margin: 80px 0px 8px;
 }
 
+@media (max-width: 450px) {
+  .featureContainer h3 {
+    margin-top: 40px;
+    font-size: 28px;
+  }
+}
+
 .featureContainer h4 {
   font-weight: normal;
   font-size: 18px;
@@ -162,6 +166,13 @@ section {
 .featureContainer p {
   margin: 0px 0px 70px;
   padding: 10px;
+}
+
+@media (max-width: 450px) {
+  .featureContainer p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 
 .discipline {
@@ -201,8 +212,9 @@ section {
 }
 
 .sideFacts p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
+  padding: 16px;
 }
 
 .factsContainer {
@@ -217,15 +229,18 @@ section {
     margin-right: 0px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .sideFacts h2 {
     font-size: 30px;
+    padding-bottom: 10px;
   }
   .factsContainer {
-    padding: 20px 20px;
+    padding: 0px 0px;
+    margin-top: -40px;
+    margin-bottom: 0px;
   }
   .sideFacts p {
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 50px;
   }
 }
@@ -253,4 +268,14 @@ section {
   padding-bottom: 30px;
   font-weight: normal;
   font-size: 18px;
+}
+
+@media (max-width: 450px) {
+  .fact h3 {
+    font-size: 26px;
+  }
+
+  .fact h4 {
+    font-size: 13px;
+  }
 }
