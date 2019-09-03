@@ -47,6 +47,24 @@ const posts = [
 ]
 */
 
+const BlogPage = () => {
+  const posts = useStaticQuery(graphql`
+    query{
+      allMarkdownRemark{
+        edges{
+          node{
+            frontmatter{
+              title
+              date
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(posts)
+
   return (
     <Layout>
       <SEO title="Blog" />

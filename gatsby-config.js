@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `audiophil`,
     description: `Modernes und akustisch optimiertes Tonstudio in Erfurt; Inhaber: Philipp Schwetschenau`,
+    email: "hello@audiophilproduction.de",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,5 +31,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src`,
+      },
+    },
+    "gatsby-transformer-remark",
   ],
 }
