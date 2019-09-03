@@ -59,7 +59,7 @@ module.exports = {
         baseUrl: "https://studiobau.philippschwetschenau.de",
         protocol: "https",
         hostingWPCOM: false,
-        useACF: true,
+        useACF: false,
         acfOptionPageIds: [],
         auth: {
           htaccess_user: "your-htaccess-username",
@@ -68,14 +68,12 @@ module.exports = {
         },
         cookies: {},
         verboseOutput: false,
-        perPage: 100,
         concurrentRequests: 10,
         includedRoutes: [
           "**/categories",
           "**/posts",
           //"**/media",
-          "**/tags",
-          "**/taxonomies",
+          "**/tags"
         ],
         keepMediaSizes: false,
         normalizer: function ({ entities }) {
