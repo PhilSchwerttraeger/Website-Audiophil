@@ -225,7 +225,7 @@ const IndexPage = () => (
         }}
       >
         <Grid container>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <Grid
               container
               justify="center"
@@ -244,7 +244,7 @@ const IndexPage = () => (
             </Grid>
           </Grid>
 
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <div className={layoutStyles.sideFacts}>
               <h2>
                 Viel hilft viel: <br /> Ein Projekt der großen Zahlen
