@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-blogpost-js","path":"/blog/2019-07-27","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"2019-07-27"}}}
+{"componentChunkName":"component---src-templates-blogpost-js","path":"/blog/2019-07-27","webpackCompilationHash":"","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Aufstellung Wandmodule","date":"27. Juli 2019"},"html":"<p>Ganz viel Text.</p>"}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"2019-07-27"}}}

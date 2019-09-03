@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-blogpost-js","path":"/blog/2019-08-22","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"2019-08-22"}}}
+{"componentChunkName":"component---src-templates-blogpost-js","path":"/blog/2019-08-22","webpackCompilationHash":"","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Aufnahmeraum-Wände","date":"21. August 2019"},"html":"<p>Ganz viel Text aus diesem Post.</p>"}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"2019-08-22"}}}
