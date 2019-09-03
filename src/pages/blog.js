@@ -15,25 +15,21 @@ import blog_image3 from "../images/blog_image3.jpg"
 import BlogPostCard from "../components/blogpostcard.js"
 
 const BlogPage = () => {
+
   const posts = useStaticQuery(graphql`
     query{
-      allMarkdownRemark{
+      allWordpressPost{
         edges{
           node{
-            frontmatter{
-              title
-              date
-              category
-              excerpt
-            }
+            title
+            date
+            excerpt
+            slug
             id
-            fields{
-              slug
-            }
           }
         }
       }
-    }
+    }    
   `)
 
   console.log(posts)
@@ -44,8 +40,8 @@ const BlogPage = () => {
       <section className={blogStyles.section}>
         <h1>Blog</h1>
         <Grid container spacing={3}>
-          {posts.allMarkdownRemark.edges.map(post => {
-            return <BlogPostCard key={post.node.id} url={post.node.fields.slug} data={post.node.frontmatter} />
+          {posts.allWordpressPost.edges.map(post => {
+            return <BlogPostCard key={post.node.id} url={post.node.slug} data={post.node} />
           })}
         </Grid>
       </section>

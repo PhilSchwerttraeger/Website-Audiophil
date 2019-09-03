@@ -4,20 +4,16 @@ import { graphql } from 'gatsby'
 
 export const query = graphql`
   query(
-    $slug: Date!
+    $slug: String!
   ) {
-    markdownRemark (
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    wordpressPost (
+      slug: {
+        eq: $slug
       }
     ) {
-      frontmatter {
-        title
-        date
-      }
-      html
+      title
+      date
+      content
     }
   }
 `
@@ -26,9 +22,9 @@ const blogpost = ({ data }) => {
   return (
     <div>
       <Layout>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <h2>{data.markdownRemark.frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+        <h1>{data.wordpressPost.title}</h1>
+        <h2>{data.wordpressPost.date}</h2>
+        <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}></div>
       </Layout>
     </div>
   )

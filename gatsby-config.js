@@ -52,6 +52,36 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "https://studiobau.philippschwetschenau.de",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: true,
+        acfOptionPageIds: [],
+        auth: {
+          htaccess_user: "your-htaccess-username",
+          htaccess_pass: "your-htaccess-password",
+          htaccess_sendImmediately: false
+        },
+        cookies: {},
+        verboseOutput: false,
+        perPage: 100,
+        concurrentRequests: 10,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          //"**/media",
+          "**/tags",
+          "**/taxonomies",
+        ],
+        keepMediaSizes: false,
+        normalizer: function ({ entities }) {
+          return entities
+        },
+      },
     }
   ],
 }
