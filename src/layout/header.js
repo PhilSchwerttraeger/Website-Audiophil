@@ -9,7 +9,6 @@ import fb from "../images/fb.png"
 import tw from "../images/tw.png"
 import ig from "../images/ig.png"
 import yt from "../images/yt.png"
-//import hamburger from "../images/hamburger.png"
 
 const socialmedia = [
   {
@@ -84,7 +83,12 @@ const HeroHeader = ({ siteTitle }) => (
         <div className={headerStyles.socialContainer}>
           {socialmedia.map(social => {
             return (
-              <a href={social.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={social.url}
+                key={social.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   className={headerStyles.icon}
                   src={social.icon}

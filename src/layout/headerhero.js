@@ -93,7 +93,12 @@ const HeroHeader = ({ siteTitle }) => (
         <div className={headerStyles.socialContainer}>
           {socialmedia.map(social => {
             return (
-              <a href={social.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={social.url}
+                key={social.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   className={headerStyles.icon}
                   src={social.icon}
