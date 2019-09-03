@@ -22,7 +22,7 @@ const BlogPage = () => {
         edges{
           node{
             title
-            date
+            date(formatString: "DD. MMMM YYYY", locale: "de")
             excerpt
             slug
             id

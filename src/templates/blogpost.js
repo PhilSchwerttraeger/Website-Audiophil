@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../layout/layout'
 import { graphql } from 'gatsby'
+import SEO from "../components/seo"
 
 export const query = graphql`
   query(
@@ -12,7 +13,7 @@ export const query = graphql`
       }
     ) {
       title
-      date
+      date(formatString:"MMMM Do, YYYY")
       content
     }
   }
@@ -20,13 +21,12 @@ export const query = graphql`
 
 const blogpost = ({ data }) => {
   return (
-    <div>
-      <Layout>
-        <h1>{data.wordpressPost.title}</h1>
-        <h2>{data.wordpressPost.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}></div>
-      </Layout>
-    </div>
+    <Layout>
+      <SEO title={data.wordpressPost.title} />
+      <h1>{data.wordpressPost.title}</h1>
+      <h2>{data.wordpressPost.date}</h2>
+      <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}></div>
+    </Layout>
   )
 }
 
