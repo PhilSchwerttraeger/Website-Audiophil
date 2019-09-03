@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
-import "../layout/blog.module.scss"
+import blogStyles from "./blog.module.scss"
 
 /*
 import blog_image1 from "../images/blog_image1.jpg"
@@ -41,7 +41,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section>
+      <section className={blogStyles.section}>
         <h1>Blog</h1>
         <Grid container spacing={3}>
           {posts.allMarkdownRemark.edges.map(post => {
