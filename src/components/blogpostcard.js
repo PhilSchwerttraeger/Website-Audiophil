@@ -1,9 +1,10 @@
 import React from "react"
 import postStyles from "../layout/blogpost.module.scss"
-import { Link } from "@material-ui/core"
+import { Link } from "gatsby"
 
-const BlogPostCard = data => {
-  const { title, date, category, excerpt, image, url } = data.data
+const BlogPostCard = (data) => {
+  const { title, date, category, excerpt, image } = data.data
+  const url = data.url
 
   return (
     <div className={postStyles.post}>
@@ -21,9 +22,10 @@ const BlogPostCard = data => {
         }}
       ></div>
       <div className={postStyles.textBlock}>
-        <Link to={url}>
-          <h2>{title}</h2>
-        </Link>
+
+        <h2><Link to={`/blog/${url}`}>
+          {title}
+        </Link></h2>
         <h3>{date}</h3>
         <h4>{category}</h4>
         <p>{excerpt}</p>
