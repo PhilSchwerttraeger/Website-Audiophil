@@ -6,9 +6,11 @@ import SEO from "../components/seo"
 
 import "../layout/blog.module.scss"
 
+/*
 import blog_image1 from "../images/blog_image1.jpg"
 import blog_image2 from "../images/blog_image2.jpg"
 import blog_image3 from "../images/blog_image3.jpg"
+*/
 
 import BlogPostCard from "../components/blogpostcard.js"
 
