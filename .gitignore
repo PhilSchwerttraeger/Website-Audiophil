@@ -66,5 +66,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-src/videos/rotation.mp4
-src/videos/rotation.mov
