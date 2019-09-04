@@ -6,16 +6,9 @@ import SEO from "../components/seo"
 
 import blogStyles from "./blog.module.scss"
 
-/*
-import blog_image1 from "../images/blog_image1.jpg"
-import blog_image2 from "../images/blog_image2.jpg"
-import blog_image3 from "../images/blog_image3.jpg"
-*/
-
 import BlogPostCard from "../components/blogpostcard.js"
 
 const BlogPage = () => {
-
   const posts = useStaticQuery(graphql`
     query{
       allWordpressPost{
@@ -32,17 +25,19 @@ const BlogPage = () => {
     }    
   `)
 
-  console.log(posts)
+  console.log(posts);
 
   return (
     <Layout>
-      <SEO title="Blog" />
-      <h1>Blog</h1>
-      <Grid container spacing={3}>
-        {posts.allWordpressPost.edges.map(post => {
-          return <BlogPostCard key={post.node.id} url={post.node.slug} data={post.node} />
-        })}
-      </Grid>
+      <main className={blogStyles.main}>
+        <SEO title="Blog" />
+        <h1>Blog</h1>
+        <Grid container spacing={3}>
+          {posts.allWordpressPost.edges.map(post => {
+            return <BlogPostCard key={post.node.id} url={post.node.slug} data={post.node} />
+          })}
+        </Grid>
+      </main>
     </Layout>
   )
 }

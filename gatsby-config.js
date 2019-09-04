@@ -46,7 +46,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 750,
+              maxWidth: 1920,
               linkImagesToOriginal: false
             }
           }
@@ -68,6 +68,10 @@ module.exports = {
         },
         cookies: {},
         verboseOutput: false,
+        searchAndReplaceContentUrls: {
+          sourceUrl: "https://source-url.com",
+          replacementUrl: "https://replacement-url.com",
+        },
         concurrentRequests: 10,
         includedRoutes: [
           "**/categories",

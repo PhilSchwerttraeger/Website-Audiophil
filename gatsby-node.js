@@ -6,14 +6,14 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // 1. Get path to template
   const blogTemplate = path.resolve("./src/templates/blogpost.js")
 
-  // 2. Get markdown data
+  // 2. Get data
   const res = await graphql(`
     query{
       allWordpressPost{
         edges{
           node{
             title
-            date
+            date(formatString: "DD. MMMM YYYY", locale: "de")
             excerpt
             slug
             id
@@ -22,6 +22,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }    
   `)
+
+  console.log(res);
 
   // 3. Create new pages
   res.data.allWordpressPost.edges.forEach((edge) => {
@@ -33,7 +35,4 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-
-
-
 }

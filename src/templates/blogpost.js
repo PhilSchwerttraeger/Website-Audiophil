@@ -2,6 +2,9 @@ import React from 'react'
 import Layout from '../layout/layout'
 import { graphql } from 'gatsby'
 import SEO from "../components/seo"
+import Grid from "@material-ui/core/Grid"
+
+import blogPostStyling from "./blogpost.module.scss"
 
 export const query = graphql`
   query(
@@ -13,7 +16,7 @@ export const query = graphql`
       }
     ) {
       title
-      date(formatString:"MMMM Do, YYYY")
+      date(formatString: "DD. MMMM YYYY", locale: "de")
       content
     }
   }
@@ -23,10 +26,32 @@ const blogpost = ({ data }) => {
   return (
     <Layout>
       <SEO title={data.wordpressPost.title} />
-      <h1>{data.wordpressPost.title}</h1>
-      <h2>{data.wordpressPost.date}</h2>
-      <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}></div>
-    </Layout>
+
+      <section className={blogPostStyling.container}>
+
+        <div
+          className={blogPostStyling.head}>
+          <Grid item>
+            <h1 className={blogPostStyling.heading}>
+              {data.wordpressPost.title}
+            </h1>
+          </Grid>
+          <Grid item>
+            <span className={blogPostStyling.date}>
+              {data.wordpressPost.date}
+            </span>
+          </Grid>
+        </div>
+
+
+        <div
+          dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
+          className={blogPostStyling.wordpressContent}
+        >
+        </div>
+
+      </section>
+    </Layout >
   )
 }
 

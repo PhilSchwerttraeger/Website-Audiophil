@@ -1,0 +1,41 @@
+@import "../layout/colors.scss";
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0px 48px 0px;
+}
+// Title + Date (+ ggf. tags)
+.head {
+  margin: 100px 0px 50px;
+}
+.heading {
+  color: $ternary;
+  font-size: 48px;
+}
+figure {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  margin: 10px;
+  font-size: 1rem;
+  color: $ternary;
+  text-align: center;
+}
+
+.wordpressContent p {
+  color: $ternary;
+  font-size: 1.2rem;
+}
+
+.date {
+  color: $ternary;
+  font-weight: bold;
+  opacity: 0.5;
+}
