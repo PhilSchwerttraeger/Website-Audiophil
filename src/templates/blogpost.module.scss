@@ -31,16 +31,26 @@
   }
 }
 
-figure {
+.date {
+  color: $ternary;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.chip {
+  padding-top: 20px;
+}
+
+.wordpressContent figure {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-figure img {
+.wordpressContent figure img {
   width: 100%;
 }
 
-figcaption {
+.wordpressContent figcaption {
   margin: 10px;
   font-size: 1rem;
   color: $ternary;
@@ -58,13 +68,7 @@ figcaption {
   }
 }
 
-.date {
-  color: $ternary;
-  font-weight: bold;
-  opacity: 0.5;
-}
-
-.container a {
+.wordpressContent a {
   background: linear-gradient(
       to bottom, $ternary 0%,
       $ternary 100%
@@ -77,7 +81,7 @@ figcaption {
   transition: background-size .5s, color .5s .2s;
 }
 
-a:hover {
+.wordpressContent a:hover {
   color: $primary;
   background-size: 4px 50px;
 }

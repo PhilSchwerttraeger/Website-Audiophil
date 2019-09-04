@@ -3,6 +3,8 @@ import Layout from '../layout/layout'
 import { graphql } from 'gatsby'
 import SEO from "../components/seo"
 import Grid from "@material-ui/core/Grid"
+import Chip from "@material-ui/core/Chip"
+import { navigate } from "gatsby"
 
 import blogPostStyling from "./blogpost.module.scss"
 
@@ -18,6 +20,9 @@ export const query = graphql`
       title
       date(formatString: "DD. MMMM YYYY", locale: "de")
       content
+      categories {
+        name
+      }
     }
   }
 `
@@ -29,19 +34,34 @@ const blogpost = ({ data }) => {
 
       <section className={blogPostStyling.container}>
 
-        <div
+        <Grid
+          container
+          style={{ justifyContent: "space-between" }}
           className={blogPostStyling.head}>
           <Grid item>
             <h1 className={blogPostStyling.heading}>
               {data.wordpressPost.title}
             </h1>
-          </Grid>
-          <Grid item>
             <span className={blogPostStyling.date}>
               {data.wordpressPost.date}
             </span>
           </Grid>
-        </div>
+          <Grid item className={blogPostStyling.chip}>
+            {console.log(data.wordpressPost.categories)}
+            {data.wordpressPost.categories.map(category => {
+              return (
+                <Chip
+                  key={category.name}
+                  variant="outlined"
+                  label={category.name}
+                  clickable
+                  onClick={() => navigate(`/${category.name}`)}
+                  style={{ color: "#597F97" }}
+                />
+              )
+            })}
+          </Grid>
+        </Grid>
 
 
         <div

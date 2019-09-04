@@ -17,6 +17,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
             excerpt
             slug
             id
+            categories{
+              name
+            }
           }
         }
       }
