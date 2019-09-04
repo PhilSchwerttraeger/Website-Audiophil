@@ -37,14 +37,12 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className={blogStyles.section}>
-        <h1>Blog</h1>
-        <Grid container spacing={3}>
-          {posts.allWordpressPost.edges.map(post => {
-            return <BlogPostCard key={post.node.id} url={post.node.slug} data={post.node} />
-          })}
-        </Grid>
-      </section>
+      <h1>Blog</h1>
+      <Grid container spacing={3}>
+        {posts.allWordpressPost.edges.map(post => {
+          return <BlogPostCard key={post.node.id} url={post.node.slug} data={post.node} />
+        })}
+      </Grid>
     </Layout>
   )
 }

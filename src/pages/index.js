@@ -98,7 +98,7 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     {/* SECTION A: WELCOME */}
-    <section>
+    <section id="section-a" className={layoutStyles.section}>
       <div className={layoutStyles.contentWrap}>
         <h2 id="section-a">Hallo Internet!</h2>
         <div className={layoutStyles.contentText}>
@@ -143,7 +143,7 @@ const IndexPage = () => (
     </section>
 
     {/* SECTION B: FEATURES */}
-    <section>
+    <section id="section-b" className={layoutStyles.section}>
       <div
         className={layoutStyles.contentWrap}
         style={{
@@ -177,7 +177,7 @@ const IndexPage = () => (
     </section>
 
     {/* SECTION C: DREAM */}
-    <section>
+    <section id="section-c" className={layoutStyles.section}>
       <div className={layoutStyles.contentWrap}>
         <h2 id="section-c">Was lange währt, wird endlich gut.</h2>
         <div className={layoutStyles.contentText}>
@@ -207,21 +207,19 @@ const IndexPage = () => (
             )
           })}
         </div>
-
-        <div style={{ marginBottom: "100px" }}></div>
       </div>
     </section>
 
     {/* SECTION D: Hard Numbers 2 */}
-    <section id="section-d">
+    <section id="section-d" className={layoutStyles.section}>
       <div
         className={layoutStyles.contentWrap}
         style={{
           backgroundImage: `url(${patch})`,
-          backgroundSize: "auto 100%",
+          backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           borderRadius: "25px",
-          paddingTop: "50px",
+          paddingTop: "20px",
         }}
       >
         <Grid container>
@@ -261,9 +259,9 @@ const IndexPage = () => (
     </section>
 
     {/* SECTION E: CALL TO ACTION */}
-    <section>
+    <section id="section-e" className={layoutStyles.section}>
       <div className={layoutStyles.contentWrap}>
-        <h2 id="section-e" style={{ padding: 0 }}>
+        <h2 id="section-e" style={{ padding: "80px 0px 0px" }}>
           Und?
         </h2>
         <h3 className={layoutStyles.question}>Lust was zusammen zu machen?</h3>
