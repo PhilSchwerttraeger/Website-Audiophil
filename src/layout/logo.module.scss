@@ -1,0 +1,30 @@
+@import "colors.scss";
+
+// Logo
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: $primary;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease 0s;
+}
+
+.logoRow1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: -2px;
+}
+
+.logoRow2 {
+  font-size: 18px;
+}
+
+.unstyledLink {
+  text-decoration: none;
+}

@@ -10,6 +10,8 @@ import tw from "../images/tw.png"
 import ig from "../images/ig.png"
 import yt from "../images/yt.png"
 
+import Logo from './logo.js'
+
 const socialmedia = [
   {
     name: "facebook",
@@ -37,12 +39,7 @@ const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.normalHeader}>
     <div className={headerStyles.topBar}>
       <div className={headerStyles.topBarContainer}>
-        <Link to="/" className={headerStyles.unstyledLink}>
-          <div className={headerStyles.logo}>
-            <div className={headerStyles.logoRow1}>audiophil</div>
-            <div className={headerStyles.logoRow2}>music production</div>
-          </div>
-        </Link>
+        <Logo />
 
         <div className={headerStyles.spacer}></div>
 
