@@ -61,24 +61,6 @@
   display: flex;
 }
 
-
-// Social media icons in top bar
-
-.socialContainer {
-  margin: auto;
-  display: flex;
-  align-content: center;
-}
-
-.icon {
-  height: 26px;
-  margin-left: 12px;
-}
-
-.icon:hover {
-  opacity: 0.6;
-}
-
 .spacer,
 .menu {
   display: none;
@@ -88,9 +70,6 @@
   .spacer {
     display: flex;
     flex-grow: 2;
-  }
-  .socialContainer {
-    display: none;
   }
 }
 
