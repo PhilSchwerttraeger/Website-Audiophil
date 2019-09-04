@@ -47,35 +47,9 @@ const HeroHeader = ({ siteTitle }) => (
           <MobileMenu />
         </div>
 
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/blog"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/contact"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Kontakt
-            </Link>
-          </li>
-        </ul>
+        <Nav />
+
+        <Social />
 
         <div className={headerStyles.socialContainer}>
           {socialmedia.map(social => {
