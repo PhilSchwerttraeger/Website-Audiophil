@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Grid from "@material-ui/core/Grid"
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
@@ -38,7 +37,7 @@ const BlogPage = () => {
       <main className={blogStyles.main}>
         <SEO title="Blog" />
         <h1>Blog</h1>
-        <Grid container spacing={3}>
+        <div className={blogStyles.grid}>
           {posts.allWordpressPost.edges.map(post => {
             return (
               <BlogPostCard
@@ -47,12 +46,11 @@ const BlogPage = () => {
                 title={post.node.title}
                 date={post.node.date}
                 categories={post.node.categories}
-                image={post.node._links.wp_featuredmedia}
-
+                image={post.node._links.wp_featuredmedia} className={blogStyles.gridItem}
               />
             )
           })}
-        </Grid>
+        </div>
       </main>
     </Layout>
   )
