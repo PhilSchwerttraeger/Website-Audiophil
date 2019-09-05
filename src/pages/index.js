@@ -266,7 +266,7 @@ const IndexPage = () => (
         </h2>
         <h3 className={layoutStyles.question}>Lust was zusammen zu machen?</h3>
         <div className={layoutStyles.centered}>
-          <Link to="/blog">
+          <Link to="/contact">
             <button type="button" className={layoutStyles.button}>
               <span>Kontakt</span>
             </button>

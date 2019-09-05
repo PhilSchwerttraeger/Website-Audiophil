@@ -1,9 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import MobileMenu from "./mobilemenu"
 
 import headerStyles from "./header.module.scss"
+import Logo from './logo'
+import Nav from './nav'
+import Social from './social'
+import MobileMenu from "./mobilemenu"
 
 import video from "../videos/rotation.mp4"
 import fb from "../images/fb.png"
@@ -47,12 +50,7 @@ const HeroHeader = ({ siteTitle }) => (
 
     <div className={headerStyles.topBarHero}>
       <div className={headerStyles.topBarContainer}>
-        <Link to="/" className={headerStyles.unstyledLink}>
-          <div className={headerStyles.logo}>
-            <div className={headerStyles.logoRow1}>audiophil</div>
-            <div className={headerStyles.logoRow2}>music production</div>
-          </div>
-        </Link>
+        <Logo />
 
         <div className={headerStyles.spacer}></div>
 
@@ -60,54 +58,14 @@ const HeroHeader = ({ siteTitle }) => (
           <MobileMenu />
         </div>
 
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/blog"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              to="/contact"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Kontakt
-            </Link>
-          </li>
-        </ul>
-
-        <div className={headerStyles.socialContainer}>
-          {socialmedia.map(social => {
-            return (
-              <a
-                href={social.url}
-                key={social.name}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className={headerStyles.icon}
-                  src={social.icon}
-                  alt={social.name}
-                ></img>
-              </a>
-            )
-          })}
+        <div className={headerStyles.nav}>
+          <Nav />
         </div>
+
+        <div className={headerStyles.social}>
+          <Social />
+        </div>
+
       </div>
     </div>
 

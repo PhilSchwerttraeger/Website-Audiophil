@@ -58,10 +58,10 @@ class MobileMenu extends React.Component {
           Home
         </Link>
         <Link id="blog" className="menu-item" to="/blog">
-          About
+          Blog
         </Link>
         <Link id="contact" className="menu-item" to="/contact">
-          Contact
+          Kontakt
         </Link>
       </Menu>
     )
