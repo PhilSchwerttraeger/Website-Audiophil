@@ -22,7 +22,7 @@ export default function nav() {
     <ul className={navStyles.container}>
       {pages.map(page => {
         return (
-          <li>
+          <li key={page.label}>
             <Link
               className={navStyles.navItem}
               to={page.link}

@@ -163,7 +163,13 @@ const IndexPage = () => (
         >
           {hardNumbers.map(item => {
             return (
-              <Grid item xs={6} md={3} className={layoutStyles.feature}>
+              <Grid
+                key={item.title}
+                item
+                xs={6}
+                md={3}
+                className={layoutStyles.feature}
+              >
                 <div className={layoutStyles.card}>
                   <h3>{item.title}</h3>
                   <h4>{item.subtitle}</h4>
@@ -200,7 +206,10 @@ const IndexPage = () => (
         <div className={layoutStyles.contentText}>
           {disciplines.map(item => {
             return (
-              <div className={layoutStyles.discipline}>
+              <div
+                key={item.title}
+                className={layoutStyles.discipline}
+              >
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
@@ -231,7 +240,11 @@ const IndexPage = () => (
             >
               {hardNumbers2.map(item => {
                 return (
-                  <Grid item xs={6} className={layoutStyles.fact}>
+                  <Grid
+                    key={item.value}
+                    item xs={6}
+                    className={layoutStyles.fact}
+                  >
                     <div className={layoutStyles.card2}>
                       <h3>{item.value}</h3>
                       <h4>{item.unit}</h4>

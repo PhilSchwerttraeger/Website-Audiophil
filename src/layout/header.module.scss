@@ -71,12 +71,6 @@
   display: flex;
 }
 
-@media all and (max-width: 460px) {
-  .nav {
-    display: none;
-  }
-}
-
 .social {
   margin: auto;
   display: flex;
@@ -93,7 +87,7 @@
   }
 }
 
-@media all and (max-width: 460px) {
+@media all and (max-width: 530px) {
   .nav {
     display: none;
   }
