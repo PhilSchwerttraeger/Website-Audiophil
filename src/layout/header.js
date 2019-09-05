@@ -1,14 +1,10 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
 import MobileMenu from "./mobilemenu"
-
 import headerStyles from "./header.module.scss"
-
 import Logo from './logo'
 import Nav from './nav'
 import Social from './social'
-
 
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.normalHeader}>
@@ -22,9 +18,13 @@ const HeroHeader = ({ siteTitle }) => (
           <MobileMenu />
         </div>
 
-        <Nav />
+        <div className={headerStyles.nav}>
+          <Nav />
+        </div>
 
-        <Social />
+        <div className={headerStyles.social}>
+          <Social />
+        </div>
 
       </div>
     </div>

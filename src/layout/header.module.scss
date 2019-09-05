@@ -66,10 +66,30 @@
   display: none;
 }
 
+.nav {
+  flex-grow: 2;
+  display: flex;
+}
+
+@media all and (max-width: 460px) {
+  .nav {
+    display: none;
+  }
+}
+
+.social {
+  margin: auto;
+  display: flex;
+  align-content: center;
+}
+
 @media all and (max-width: 600px) {
   .spacer {
     display: flex;
     flex-grow: 2;
+  }
+  .social {
+    display: none;
   }
 }
 

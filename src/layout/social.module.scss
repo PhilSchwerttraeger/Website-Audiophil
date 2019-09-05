@@ -1,18 +1,6 @@
 @import "colors.scss";
 
 // Social media icons in top bar
-.container {
-  margin: auto;
-  display: flex;
-  align-content: center;
-}
-
-@media all and (max-width: 600px) {
-  .container {
-    display: none;
-  }
-}
-
 .icon {
   height: 26px;
   margin-left: 12px;
