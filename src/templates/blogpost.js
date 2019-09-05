@@ -82,6 +82,12 @@ const blogpost = ({ data }) => {
         >
         </div>
 
+        <hr />
+
+        <div className={blogPostStyling.released}>
+          veröffentlicht am {data.wordpressPost.date}
+        </div>
+
       </section>
     </Layout >
   )
