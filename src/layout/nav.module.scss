@@ -23,24 +23,61 @@
   color: $primary;
   text-decoration: none;
   transition: all 0.3s ease 0s;
-  margin-left: 25px;
+  margin-left: 36px;
   letter-spacing: 0.1rem;
   transition: all .5s;
 }
 
-.navItem:hover {
-  opacity: 0.6;
-  
+
+
+
+
+
+
+.container * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 
-.itemActive {
-  background: linear-gradient(
-      to bottom, $primary 0%,
-      $primary 100%
-    );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 4px 2px;
+.container li {
+  display: inline-block;
+  list-style: outside none none;
+}
+
+.container a {
+  padding: 0.3em 0;
+  position: relative;
   text-decoration: none;
-  transition: background-size .5s, color .5s .2s;
+  display: inline-block;
+}
+
+.container a:before,
+.container a:after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: $primary;
+  width: 0;
+}
+.container a:before {
+  top: 0;
+  left: 0;
+}
+.container a:after {
+  bottom: 0;
+  right: 0;
+}
+.container a:hover,
+.container .current a {
+  color: #ffffff;
+}
+.container a:hover:before,
+.container .current a:before,
+.container a:hover:after,
+.container .current a:after {
+  width: 100%;
 }

@@ -26,7 +26,7 @@ export default function nav() {
             <Link
               className={navStyles.navItem}
               to={page.link}
-              activeClassName={navStyles.itemActive}
+              activeClassName={navStyles.navItem}
             >
               {page.label}
             </Link>
