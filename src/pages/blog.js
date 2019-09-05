@@ -21,10 +21,8 @@ const BlogPage = () => {
             categories {
               name
             }
-            _links {
-              wp_featuredmedia {
-                href
-              }
+            acf {
+              xtra_img
             }
           }
         }
@@ -46,7 +44,9 @@ const BlogPage = () => {
                 title={post.node.title}
                 date={post.node.date}
                 categories={post.node.categories}
-                image={post.node._links.wp_featuredmedia} className={blogStyles.gridItem}
+                image={post.node.acf.xtra_img}
+
+                className={blogStyles.gridItem}
               />
             )
           })}

@@ -6,21 +6,29 @@ import postStyles from "./blogpostcard.module.scss"
 const BlogPostCard = (props) => {
   const { title, date, categories, image, url } = props;
 
+  if (image) {
+    console.log(image);
+  }
+
   return (
     <div className={postStyles.post}>
-      <div
-        className={postStyles.coverimage}
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundSize: "100% auto",
-          //backgroundSize: "200px 200px",
-          backgroundRepeat: "no-repeat",
-          //borderRadius: "25px",
-          minHeight: 200,
-          borderTopRightRadius: 10,
-          borderTopLeftRadius: 10,
-        }}
-      ></div>
+      <Link to={`/blog/${url}`}>
+        <div
+          className={postStyles.coverimage}
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: "100% auto",
+            //backgroundSize: "200px 200px",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "50% 50%",
+            //borderRadius: "25px",
+            minHeight: 200,
+            borderTopRightRadius: 10,
+            borderTopLeftRadius: 10,
+
+          }}
+        ></div>
+      </Link>
       <div className={postStyles.textBlock}>
 
         <h2><Link to={`/blog/${url}`}>

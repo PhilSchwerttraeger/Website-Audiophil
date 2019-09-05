@@ -24,6 +24,9 @@ export const query = graphql`
       categories {
         name
       }
+      acf {
+        xtra_img
+      }
     }
   }
 `

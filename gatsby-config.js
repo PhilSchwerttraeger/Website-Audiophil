@@ -39,27 +39,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          "gatsby-remark-relative-images",
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 1920,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    },
-    {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "https://studiobau.philippschwetschenau.de",
         protocol: "https",
         hostingWPCOM: false,
-        useACF: false,
+        useACF: true,
         acfOptionPageIds: [],
         auth: {
           htaccess_user: "your-htaccess-username",
@@ -72,7 +57,7 @@ module.exports = {
           sourceUrl: "https://source-url.com",
           replacementUrl: "https://replacement-url.com",
         },
-        concurrentRequests: 10,
+        concurrentRequests: 1,
         includedRoutes: [
           "**/categories",
           "**/posts",
