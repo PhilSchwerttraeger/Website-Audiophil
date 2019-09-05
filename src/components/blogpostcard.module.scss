@@ -1,0 +1,42 @@
+@import "../layout/colors.scss";
+
+.post {
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+.textBlock {
+  padding: 10px;
+}
+
+.textBlock h2 {
+  color: $secondary;
+}
+
+.textBlock h3 {
+  font-weight: normal;
+  font-size: 16px;
+  color: rgb(165, 165, 165);
+}
+
+.chip {
+  padding-top: 10px;
+}
+
+.textBlock a {
+  background: linear-gradient(
+      to bottom, $secondary 0%,
+      $ternary 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 2px;
+  color: $secondary;
+  text-decoration: none;
+  transition: background-size .5s, color .5s .2s;
+}
+
+.textBlock a:hover {
+  color: $primary;
+  background-size: 4px 50px;
+}

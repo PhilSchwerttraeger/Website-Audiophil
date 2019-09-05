@@ -9,34 +9,6 @@ import Social from './social'
 import MobileMenu from "./mobilemenu"
 
 import video from "../videos/rotation.mp4"
-import fb from "../images/fb.png"
-import tw from "../images/tw.png"
-import ig from "../images/ig.png"
-import yt from "../images/yt.png"
-//import hamburger from "../images/hamburger.png"
-
-const socialmedia = [
-  {
-    name: "facebook",
-    url: "https://www.facebook.com/pg/audiophil.musicproduction",
-    icon: fb,
-  },
-  {
-    name: "twitter",
-    url: "https://twitter.com/audiophil_",
-    icon: tw,
-  },
-  {
-    name: "instagram",
-    url: "https://www.instagram.com/flippazoid/",
-    icon: ig,
-  },
-  {
-    name: "youtube",
-    url: "https://www.youtube.com/channel/UCFXHUOqNlbU1AccXNPWju6A",
-    icon: yt,
-  },
-]
 
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.heroHeader}>

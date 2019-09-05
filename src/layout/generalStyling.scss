@@ -1,0 +1,32 @@
+// Specific elements that cannot be referenced with css modules 
+// (e.g. generated items in blog posts)
+
+@import "./colors.scss";
+
+.wp-block-image {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.wp-block-image img {
+  width: 100%;
+}
+
+.wp-block-image {
+  margin: 10px 0px;
+  font-size: 1rem;
+  color: $ternary;
+  text-align: center;
+}
+
+.wp-block-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.wp-block-gallery figure {
+  margin: 0;
+}

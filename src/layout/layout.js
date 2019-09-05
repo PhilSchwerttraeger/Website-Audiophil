@@ -5,7 +5,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import HeroHeader from "./headerhero"
 import Footer from "./footer"
+
+// Explicit styling
 import layoutStyles from "./layout.module.scss"
+
+// Implicit styling (see description in file)
+import "./generalStyling.scss"
 
 const Layout = ({ children, type }) => {
   if (typeof window !== 'undefined') {

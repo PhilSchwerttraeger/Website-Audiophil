@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from '../layout/layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import SEO from "../components/seo"
 import Grid from "@material-ui/core/Grid"
 import Chip from "@material-ui/core/Chip"
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import { navigate } from "gatsby"
 
 import blogPostStyling from "./blogpost.module.scss"
@@ -39,6 +40,14 @@ const blogpost = ({ data }) => {
           style={{ justifyContent: "space-between" }}
           className={blogPostStyling.head}>
           <Grid item>
+            <div className={blogPostStyling.back}>
+              <Link to="/blog">
+                <div className={blogPostStyling.alignVertically}>
+                  <KeyboardArrowLeft />
+                  zurück
+                </div>
+              </Link>
+            </div>
             <h1 className={blogPostStyling.heading}>
               {data.wordpressPost.title}
             </h1>
@@ -56,7 +65,7 @@ const blogpost = ({ data }) => {
                   label={category.name}
                   clickable
                   onClick={() => navigate(`/${category.name}`)}
-                  style={{ color: "#597F97" }}
+                  style={{ color: "#597F97", marginRight: "5px" }}
                 />
               )
             })}

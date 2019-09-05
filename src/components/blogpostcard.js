@@ -1,10 +1,10 @@
 import React from "react"
-import postStyles from "../layout/blogpost.module.scss"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+import Chip from '@material-ui/core/Chip'
+import postStyles from "./blogpostcard.module.scss"
 
-const BlogPostCard = (data) => {
-  const { title, date, category, excerpt, image } = data.data
-  const url = data.url
+const BlogPostCard = (props) => {
+  const { title, date, categories, image, url } = props;
 
   return (
     <div className={postStyles.post}>
@@ -27,8 +27,21 @@ const BlogPostCard = (data) => {
           {title}
         </Link></h2>
         <h3>{date}</h3>
-        <h4>{category}</h4>
-        <p>{excerpt}</p>
+
+        <div className={postStyles.chip}>
+          {categories.map(category => {
+            return (
+              <Chip
+                key={category.name}
+                variant="outlined"
+                label={category.name}
+                clickable
+                onClick={() => navigate(`/${category.name}`)}
+                style={{ color: "#597F97" }}
+              />
+            )
+          })}
+        </div>
       </div>
     </div>
   )
