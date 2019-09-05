@@ -7,23 +7,99 @@
 }
 
 .container {
-  display: flex;
-  margin: auto;
   max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-rows: auto;
 }
 
-// Social media icons in top bar
-.socialContainer {
-  margin: auto;
-  display: flex;
-  align-content: center;
+.sectionD {
+  justify-self:  end;
+}
+.sectionD p {
+  font-size: 0.9rem;
+}
+.sectionD img {
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.icon {
-  height: 26px;
-  margin-left: 12px;
+
+.footer ul {
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
-.icon:hover {
+.footer ul a {
+  color: $primary;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.footer ul a:hover {
   opacity: 0.6;
+}
+.footer ul a:active {
+  color: black;
+}
+
+@media(max-width: 720px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .sectionA {
+    order: 3;
+  }
+
+  .sectionB {
+    order: 1;
+  }
+
+  .sectionC {
+    order: 2;
+  }
+
+  .sectionD {
+    order: 4;
+    justify-self: start;
+  }
+}
+
+
+@media(max-width: 520px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3;
+  }
+
+  .container section {
+    padding: 30px 0px;
+  }
+
+  .sectionA {
+    order: 1;
+    justify-self: center;
+    grid-column: span 2;
+  }
+
+  .sectionB {
+    order: 2;
+    justify-self: center;
+  }
+
+  .sectionC {
+    order: 3;
+    justify-self: center;
+  }
+
+  .sectionD {
+    order: 4;
+    justify-self: center;
+    grid-column: span 2;
+    text-align: center;
+  }
 }

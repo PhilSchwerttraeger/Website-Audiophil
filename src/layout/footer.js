@@ -1,40 +1,59 @@
 import React from "react"
 import footerStyles from "./footer.module.scss"
-import Grid from '@material-ui/core/Grid'
 import { Link } from 'gatsby'
-import Logo from './logo.js'
+import Logo from './logo'
+import Social from './social'
 
 const Footer = () =>
   <footer className={footerStyles.footer}>
-    <Grid container className={footerStyles.container}>
-      <Grid item>
+    <div className={footerStyles.container}>
+      <section className={footerStyles.sectionA}>
         <Logo />
-      </Grid>
-      <Grid item>
+      </section>
+      <section className={footerStyles.sectionB}>
         <ul>
-          <li>hi</li>
-          <li>das</li>
-          <li>dfg</li>
+          <li>
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              Kontakt
+            </Link>
+          </li>
         </ul>
-      </Grid>
+      </section>
 
-      <Grid item>
+      <section className={footerStyles.sectionC}>
         <ul>
-          <li>hi</li>
-          <li>das</li>
-          <li>dfg</li>
+          <li>
+            <Link to="/impressum">
+              Impressum
+            </Link>
+          </li>
+          <li>
+            <Link to="/datenschutz">
+              Datenschutz
+            </Link>
+          </li>
         </ul>
-      </Grid>
+      </section>
 
-      <Grid item>
-
-      </Grid>
-
-      <Grid item>
-
-        © {new Date().getFullYear()}
-      </Grid>
-    </Grid>
+      <section className={footerStyles.sectionD}>
+        <Social />
+        <p>
+          © {new Date().getFullYear()} - Alle Rechte vorbehalten <br />
+          Audiophil music production<br />
+          Philipp Schwetschenau
+        </p>
+      </section>
+    </div>
   </footer>
 
 export default Footer
