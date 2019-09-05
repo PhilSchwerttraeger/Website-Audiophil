@@ -24,12 +24,23 @@
   text-decoration: none;
   transition: all 0.3s ease 0s;
   margin-left: 25px;
+  letter-spacing: 0.1rem;
+  transition: all .5s;
 }
 
 .navItem:hover {
   opacity: 0.6;
+  
 }
 
-.navItem:active {
-  color: $secondary;
+.itemActive {
+  background: linear-gradient(
+      to bottom, $primary 0%,
+      $primary 100%
+    );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 2px;
+  text-decoration: none;
+  transition: background-size .5s, color .5s .2s;
 }

@@ -2,36 +2,37 @@ import React from 'react'
 import navStyles from './nav.module.scss'
 import { Link } from 'gatsby'
 
+const pages = [
+  {
+    label: "HOME",
+    link: "/"
+  },
+  {
+    label: "BLOG",
+    link: "/blog"
+  },
+  {
+    label: "KONTAKT",
+    link: "/contact"
+  }
+]
+
 export default function nav() {
   return (
     <ul className={navStyles.container}>
-      <li>
-        <Link
-          className={navStyles.navItem}
-          to="/"
-          activeStyle={{ textDecoration: "underline" }}
-        >
-          Home
-      </Link>
-      </li>
-      <li>
-        <Link
-          className={navStyles.navItem}
-          to="/blog"
-          activeStyle={{ textDecoration: "underline" }}
-        >
-          Blog
-      </Link>
-      </li>
-      <li>
-        <Link
-          className={navStyles.navItem}
-          to="/contact"
-          activeStyle={{ textDecoration: "underline" }}
-        >
-          Kontakt
-      </Link>
-      </li>
+      {pages.map(page => {
+        return (
+          <li>
+            <Link
+              className={navStyles.navItem}
+              to={page.link}
+              activeClassName={navStyles.itemActive}
+            >
+              {page.label}
+            </Link>
+          </li>
+        )
+      })}
     </ul>
   )
 }
