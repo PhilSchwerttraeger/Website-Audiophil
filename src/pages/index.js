@@ -203,7 +203,7 @@ const IndexPage = () => (
           </p>
         </div>
 
-        <div className={layoutStyles.contentText}>
+        <div className={layoutStyles.disciplines}>
           {disciplines.map(item => {
             return (
               <div
