@@ -53,6 +53,37 @@ const Footer = () =>
           Philipp Schwetschenau
         </p>
       </section>
+
+      <section className={footerStyles.sectionE}>
+        <ul>
+          <li>
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link to="/impressum">
+              Impressum
+            </Link>
+          </li>
+          <li>
+            <Link to="/datenschutz">
+              Datenschutz
+            </Link>
+          </li>
+        </ul>
+      </section>
+
     </div>
   </footer>
 
