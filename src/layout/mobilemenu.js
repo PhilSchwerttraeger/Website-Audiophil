@@ -1,8 +1,7 @@
 import React from "react"
-import { slide as Menu } from "react-burger-menu"
 import { Link } from "gatsby"
 import mobileMenuStyles from "./mobilemenu.module.scss"
-
+import Hamburger from '../images/hamburger.png'
 
 class MobileMenu extends React.Component {
   constructor(props) {
@@ -31,11 +30,18 @@ class MobileMenu extends React.Component {
   render() {
     return (
       <div>
-        <div id="myNav" className={mobileMenuStyles.overlay}>
-
-          <button className={mobileMenuStyles.closebtn} onClick={this.closeNav.bind(this)}>&times;</button>
-
-          <div className={mobileMenuStyles.overlayContent} style={{ width: this.state.width }}>
+        <div
+          id="myNav"
+          className={mobileMenuStyles.overlay}
+          style={{ width: this.state.width }}
+        >
+          <span
+            className={mobileMenuStyles.closebtn}
+            onClick={this.closeNav.bind(this)}
+          >
+            &times;
+          </span>
+          <div className={mobileMenuStyles.overlayContent}>
             <Link id="home" className="menu-item" to="/">
               Home
             </Link>
@@ -46,18 +52,12 @@ class MobileMenu extends React.Component {
               Kontakt
             </Link>
           </div>
-
         </div>
 
-        <button
-          onClick={this.openNav.bind(this)}
-        >
-          open
-        </button>
+        <span onClick={this.openNav.bind(this)} style={{ cursor: "pointer" }}>
+          <img src={Hamburger} alt="menu"></img>
+        </span>
       </div >
-
-
-
     )
   }
 }
