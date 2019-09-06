@@ -43,6 +43,7 @@
   width: 100%;
   text-align: center;
   font-size: 52px;
+  color: $ternary;
 }
 
 @media (max-width: 450px) {
@@ -162,7 +163,7 @@
   width: 100%;
   text-align: center;
   font-size: 52px;
-  color: $primary;
+  color: $primary !important;
 }
 
 .featureContainer h3 {
@@ -195,6 +196,18 @@
   }
 }
 
+.disciplines {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+@media(max-width: 500px) {
+  .disciplines {
+    grid-template-columns: 1fr;
+  }
+}
+
 .discipline {
   display: flex;
   flex-direction: column;
@@ -203,8 +216,15 @@
 
 .discipline h3 {
   font-size: 30px;
+  color: $ternary;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media(max-width: 500px) {
+  .discipline h3 {
+    text-align: center;
+  }
 }
 
 .discipline p {
