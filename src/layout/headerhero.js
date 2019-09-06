@@ -13,7 +13,7 @@ import video from "../videos/rotation.mp4"
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.heroHeader}>
     <div className={headerStyles.fullscreenVideoWrap}>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source src={video} type="video/mp4" />
       </video>
     </div>
