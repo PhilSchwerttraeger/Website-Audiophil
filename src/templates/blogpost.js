@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../layout/layout'
 import { graphql, Link } from 'gatsby'
 import SEO from "../components/seo"
@@ -7,7 +7,7 @@ import Chip from "@material-ui/core/Chip"
 import { navigate } from "gatsby"
 import blogPostStyling from "./blogpost.module.scss"
 
-import parse, { domToReact } from 'html-react-parser'
+import parse from 'html-react-parser'
 
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -30,30 +30,61 @@ export const query = graphql`
     }
   }
 `
-// Parsing (search and add lightbox to post content images)
-const processHTML = (data) => {
-  if (data && data.content) {
-    return parse(data.content, {
-      replace: domNode => {
-        if (domNode.attribs && domNode.attribs.class === "wp-image-2669") {
-          let img = React.createElement(domNode.name, domNode.attribs);
-          let lightbox =
-            <Lightbox
-              mainSrc={domNode.attribs.src}
-            >
 
-            </Lightbox>;
-          return React.createElement("div", {}, [img, lightbox]);
+// Lightbox Images
+const images = [];
+
+// Parsing (search and add lightbox to post content images)
+const processHTML = (data, setIsOpen, setPhotoIndex) => {
+  if (data && data.content) {
+    let newContent = data.content;
+
+    newContent = parse(newContent, {
+      replace: domNode => {
+        if (domNode.attribs && domNode.attribs.class === "blocks-gallery-item") {
+          domNode.children[0].children[0].attribs.href = "";
+          domNode.children[0].attribs.tabIndex = "1";
+          domNode.children[0].children[0].attribs.style = "cursor: pointer";
+          domNode.children[0].children[0].attribs.className = blogPostStyling.postImage;
+
+          let src = domNode.children[0].children[0].attribs.src;
+          images.push(src);
+          let pos = images.indexOf(src);
+
+          domNode.children[0].children[0].attribs.onClick = () => {
+            setPhotoIndex(pos);
+            setIsOpen(true);
+          }
+        }
+
+        if (domNode.attribs && domNode.attribs.class === "wp-block-image") {
+          domNode.children[0].attribs.href = "";
+          domNode.attribs.tabIndex = "1";
+          domNode.children[0].attribs.style = "cursor: pointer"
+          domNode.children[0].attribs.className = "postImage";
+
+          let src = domNode.children[0].attribs.src;
+          images.push(src);
+          let pos = images.indexOf(src);
+
+          domNode.children[0].attribs.onClick = () => {
+            setPhotoIndex(pos);
+            setIsOpen(true);
+          }
         }
       }
     });
+    return newContent;
   }
 }
 
 // 
 
 const blogpost = ({ data }) => {
-  let newContent = processHTML(data.wordpressPost);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  let newContent = processHTML(data.wordpressPost, setIsOpen, setPhotoIndex);
 
   return (
     <Layout>
@@ -79,7 +110,6 @@ const blogpost = ({ data }) => {
             </span>
           </Grid>
           <Grid item className={blogPostStyling.chip}>
-            {console.log(data.wordpressPost.categories)}
             {data.wordpressPost.categories.map(category => {
               return (
                 <Chip
@@ -106,6 +136,21 @@ const blogpost = ({ data }) => {
         <div className={blogPostStyling.released}>
           veröffentlicht am {data.wordpressPost.date}
         </div>
+
+        {isOpen && (
+          <Lightbox
+            mainSrc={images[photoIndex]}
+            nextSrc={images[(photoIndex + 1) % images.length]}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex((photoIndex + images.length - 1) % images.length)
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % images.length)
+            }
+          />
+        )}
 
       </section>
     </Layout >
