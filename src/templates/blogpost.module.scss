@@ -93,16 +93,6 @@
 
 .back {
   @extend .wordpressContent;
-  background-size: 4px 0px;
-  display: flex;
-  align-items: center;
-  opacity: .6;
-  margin-left: -5px;
-}
-
-.alignVertically {
-  display: flex;
-  align-items: center;
 }
 
 .container hr {

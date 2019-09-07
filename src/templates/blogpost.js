@@ -4,12 +4,12 @@ import { graphql, Link } from 'gatsby'
 import SEO from "../components/seo"
 import Grid from "@material-ui/core/Grid"
 import Chip from "@material-ui/core/Chip"
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import { navigate } from "gatsby"
-
 import blogPostStyling from "./blogpost.module.scss"
 
 import parse from 'html-react-parser'
+import Lightbox from 'react-image-lightbox';
+
 export const query = graphql`
   query(
     $slug: String!
@@ -24,9 +24,6 @@ export const query = graphql`
       content
       categories {
         name
-      }
-      acf {
-        xtra_img
       }
     }
   }
