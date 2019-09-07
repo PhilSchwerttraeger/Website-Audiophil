@@ -62,10 +62,7 @@ const blogpost = ({ data }) => {
           <Grid item>
             <div className={blogPostStyling.back}>
               <Link to="/blog">
-                <div className={blogPostStyling.alignVertically}>
-                  <KeyboardArrowLeft />
-                  zurück
-                </div>
+                <span>&#x2B11; zurück</span>
               </Link>
             </div>
             <h1 className={blogPostStyling.heading}>
