@@ -26,7 +26,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }    
   `)
 
-  console.log(res);
+  //console.log(res);
 
   // 3. Create new pages
   res.data.allWordpressPost.edges.forEach((edge) => {

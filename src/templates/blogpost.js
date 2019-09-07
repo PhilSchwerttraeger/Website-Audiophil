@@ -88,7 +88,7 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
   }
 }
 
-// 
+
 
 const blogpost = ({ data }) => {
   const [photoIndex, setPhotoIndex] = useState(0);

@@ -11,6 +11,7 @@ const BlogPage = () => {
   const posts = useStaticQuery(graphql`
     query{
       allWordpressPost{
+        totalCount
         edges{
           node{
             title
@@ -42,7 +43,10 @@ const BlogPage = () => {
     <Layout>
       <main className={blogStyles.main}>
         <SEO title="Blog" />
-        <h1>Blog</h1>
+        <div className={blogStyles.head}>
+          <h1>Blog</h1>
+          <div className={blogStyles.postsTotal}>Posts gesamt: {posts.allWordpressPost.totalCount}</div>
+        </div>
         <div className={blogStyles.grid}>
           {posts.allWordpressPost.edges.map(post => {
             return (
@@ -58,6 +62,12 @@ const BlogPage = () => {
             )
           })}
         </div>
+
+        <hr />
+        <div className={blogStyles.released}>
+          Posts gesamt: {posts.allWordpressPost.totalCount}
+        </div>
+
       </main>
     </Layout>
   )

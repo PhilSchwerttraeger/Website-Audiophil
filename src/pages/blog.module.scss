@@ -45,12 +45,29 @@
   }
 }
 
+.head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.postsTotal {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: $secondary;
+  padding: 32px 0px;
+}
 
+.released {
+  text-align: center;
+  font-size: 14px;
+  color: $secondary;
+  opacity: 0.7;
+  margin-bottom: 80px;
+}
 
-
-
-
-
-
-
+.main hr {
+  opacity: 0.7;
+  margin: 80px 0px 8px;
+}
