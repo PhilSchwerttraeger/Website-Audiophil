@@ -41,6 +41,8 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
 
     newContent = parse(newContent, {
       replace: domNode => {
+
+        // Image Gallery
         if (domNode.attribs && domNode.attribs.class === "blocks-gallery-item") {
           domNode.children[0].children[0].attribs.href = "";
           domNode.children[0].attribs.tabIndex = "1";
@@ -57,11 +59,12 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
           }
         }
 
+        // Block Image
         if (domNode.attribs && domNode.attribs.class === "wp-block-image") {
           domNode.children[0].attribs.href = "";
           domNode.attribs.tabIndex = "1";
           domNode.children[0].attribs.style = "cursor: pointer"
-          domNode.children[0].attribs.className = "postImage";
+          domNode.children[0].attribs.className = blogPostStyling.postImage;
 
           let src = domNode.children[0].attribs.src;
           images.push(src);
@@ -71,6 +74,13 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
             setPhotoIndex(pos);
             setIsOpen(true);
           }
+        }
+
+        // Find hard-coded links in paragraphs and replace with relative links 
+        if (domNode.attribs && domNode.name === "a" && domNode.children[0].name === undefined) {
+          console.log("vorher: " + domNode.attribs.href);
+          domNode.attribs.href = domNode.attribs.href.replace('https://studiobau.philippschwetschenau.de', '/blog');
+          console.log("nachher: " + domNode.attribs.href);
         }
       }
     });
