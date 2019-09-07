@@ -22,7 +22,15 @@ const BlogPage = () => {
               name
             }
             acf {
-              xtra_img
+              xtra_img {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 710) {
+                      src
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -44,8 +52,7 @@ const BlogPage = () => {
                 title={post.node.title}
                 date={post.node.date}
                 categories={post.node.categories}
-                image={post.node.acf.xtra_img}
-
+                image={post.node.acf.xtra_img ? post.node.acf.xtra_img.localFile.childImageSharp.fluid.src : null}
                 className={blogStyles.gridItem}
               />
             )
