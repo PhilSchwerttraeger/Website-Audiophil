@@ -57,6 +57,29 @@
   }
 }
 
+
+.wordpressContent h2 {
+  font-size: 44px;
+}
+.wordpressContent h3 {
+  font-size: 36px;
+}
+.wordpressContent h4 {
+  font-size: 26px;
+}
+
+@media(max-width: 450px) {
+  .wordpressContent h2 {
+    font-size: 26px;
+  }
+  .wordpressContent h3 {
+    font-size: 22px;
+  }
+  .wordpressContent h4 {
+    font-size: 18px;
+  }
+}
+
 .wordpressContent p {
   color: $ternary;
   font-size: 1.2rem;
@@ -87,22 +110,8 @@
   background-size: 4px 50px;
 }
 
-.wordpressContent hr {
-  padding: 32px;
-}
-
 .back {
   @extend .wordpressContent;
-  background-size: 4px 0px;
-  display: flex;
-  align-items: center;
-  opacity: .6;
-  margin-left: -5px;
-}
-
-.alignVertically {
-  display: flex;
-  align-items: center;
 }
 
 .container hr {
@@ -116,3 +125,12 @@
   opacity: 0.7;
 }
 
+.postImage {
+  transition: all .5s;
+  border-radius: .5rem;
+}
+
+.postImage:hover {
+  filter: brightness(50%);
+  transition: all .5s;
+}

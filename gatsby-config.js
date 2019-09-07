@@ -57,11 +57,11 @@ module.exports = {
           sourceUrl: "https://source-url.com",
           replacementUrl: "https://replacement-url.com",
         },
-        concurrentRequests: 1,
+        concurrentRequests: 100,
         includedRoutes: [
           "**/categories",
           "**/posts",
-          //"**/media",
+          "**/media",
           "**/tags"
         ],
         keepMediaSizes: false,

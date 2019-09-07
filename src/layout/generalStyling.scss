@@ -25,9 +25,16 @@
 .wp-block-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1;
   list-style-type: none;
   padding-inline-start: 0;
+  gap: 1rem;
+}
+.wp-block-gallery img {
+  max-width: 100%;
+}
+.blocks-gallery-item figure a {
+  background: $primary;
 }
 
 .wp-block-gallery figure {

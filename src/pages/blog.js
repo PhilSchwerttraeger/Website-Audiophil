@@ -11,6 +11,7 @@ const BlogPage = () => {
   const posts = useStaticQuery(graphql`
     query{
       allWordpressPost{
+        totalCount
         edges{
           node{
             title
@@ -22,7 +23,15 @@ const BlogPage = () => {
               name
             }
             acf {
-              xtra_img
+              xtra_img {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 710) {
+                      src
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -34,7 +43,10 @@ const BlogPage = () => {
     <Layout>
       <main className={blogStyles.main}>
         <SEO title="Blog" />
-        <h1>Blog</h1>
+        <div className={blogStyles.head}>
+          <h1>Blog</h1>
+          <div className={blogStyles.postsTotal}>Posts gesamt: {posts.allWordpressPost.totalCount}</div>
+        </div>
         <div className={blogStyles.grid}>
           {posts.allWordpressPost.edges.map(post => {
             return (
@@ -44,13 +56,18 @@ const BlogPage = () => {
                 title={post.node.title}
                 date={post.node.date}
                 categories={post.node.categories}
-                image={post.node.acf.xtra_img}
-
+                image={post.node.acf.xtra_img ? post.node.acf.xtra_img.localFile.childImageSharp.fluid.src : null}
                 className={blogStyles.gridItem}
               />
             )
           })}
         </div>
+
+        <hr />
+        <div className={blogStyles.released}>
+          Posts gesamt: {posts.allWordpressPost.totalCount}
+        </div>
+
       </main>
     </Layout>
   )

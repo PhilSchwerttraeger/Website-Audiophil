@@ -32,7 +32,7 @@ const BlogPostCard = (props) => {
       <div className={postStyles.textBlock}>
 
         <h2><Link to={`/blog/${url}`}>
-          {title}
+          <div dangerouslySetInnerHTML={{ __html: title }} ></div>
         </Link></h2>
         <h3>{date}</h3>
 
@@ -51,7 +51,7 @@ const BlogPostCard = (props) => {
           })}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
