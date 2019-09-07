@@ -57,6 +57,29 @@
   }
 }
 
+
+.wordpressContent h2 {
+  font-size: 44px;
+}
+.wordpressContent h3 {
+  font-size: 36px;
+}
+.wordpressContent h4 {
+  font-size: 26px;
+}
+
+@media(max-width: 450px) {
+  .wordpressContent h2 {
+    font-size: 26px;
+  }
+  .wordpressContent h3 {
+    font-size: 22px;
+  }
+  .wordpressContent h4 {
+    font-size: 18px;
+  }
+}
+
 .wordpressContent p {
   color: $ternary;
   font-size: 1.2rem;
@@ -85,10 +108,6 @@
 .wordpressContent a:hover {
   color: $primary;
   background-size: 4px 50px;
-}
-
-.wordpressContent hr {
-  padding: 32px;
 }
 
 .back {

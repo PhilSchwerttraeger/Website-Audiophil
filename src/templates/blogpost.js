@@ -125,7 +125,6 @@ const blogpost = ({ data }) => {
           </Grid>
         </Grid>
 
-
         <div
           className={blogPostStyling.wordpressContent}
         >{newContent}
