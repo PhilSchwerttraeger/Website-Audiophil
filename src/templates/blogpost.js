@@ -7,8 +7,10 @@ import Chip from "@material-ui/core/Chip"
 import { navigate } from "gatsby"
 import blogPostStyling from "./blogpost.module.scss"
 
-import parse from 'html-react-parser'
+import parse, { domToReact } from 'html-react-parser'
+
 import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 export const query = graphql`
   query(
@@ -34,17 +36,21 @@ const processHTML = (data) => {
     return parse(data.content, {
       replace: domNode => {
         if (domNode.attribs && domNode.attribs.class === "wp-image-2669") {
-          let el =
-            <div>
-              <p>Jo</p>
-              <div>{domNode}</div>
-            </div>;
-          return el;
+          let img = React.createElement(domNode.name, domNode.attribs);
+          let lightbox =
+            <Lightbox
+              mainSrc={domNode.attribs.src}
+            >
+
+            </Lightbox>;
+          return React.createElement("div", {}, [img, lightbox]);
         }
       }
     });
   }
 }
+
+// 
 
 const blogpost = ({ data }) => {
   let newContent = processHTML(data.wordpressPost);
