@@ -9,6 +9,7 @@ import { navigate } from "gatsby"
 
 import blogPostStyling from "./blogpost.module.scss"
 
+import parse from 'html-react-parser'
 export const query = graphql`
   query(
     $slug: String!
@@ -30,8 +31,27 @@ export const query = graphql`
     }
   }
 `
+// Parsing (search and add lightbox to post content images)
+const processHTML = (data) => {
+  if (data && data.content) {
+    return parse(data.content, {
+      replace: domNode => {
+        if (domNode.attribs && domNode.attribs.class === "wp-image-2669") {
+          let el =
+            <div>
+              <p>Jo</p>
+              <div>{domNode}</div>
+            </div>;
+          return el;
+        }
+      }
+    });
+  }
+}
 
 const blogpost = ({ data }) => {
+  let newContent = processHTML(data.wordpressPost);
+
   return (
     <Layout>
       <SEO title={data.wordpressPost.title} />
@@ -77,9 +97,8 @@ const blogpost = ({ data }) => {
 
 
         <div
-          dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
           className={blogPostStyling.wordpressContent}
-        >
+        >{newContent}
         </div>
 
         <hr />
