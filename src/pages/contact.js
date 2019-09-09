@@ -2,6 +2,7 @@ import React from "react"
 import TextField from "@material-ui/core/TextField"
 import { navigate } from 'gatsby-link'
 import Button from "@material-ui/core/Button"
+import Input from '@material-ui/core/Input'
 
 import Layout from "../layout/layout"
 import styles from "./blog.module.scss"
@@ -21,14 +22,17 @@ const ContactPage = () => {
   const [state, setState] = React.useState({})
 
   const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
+    setState({ ...state, [e.target.id]: e.target.value })
+    console.log(state);
   }
 
   const handleAttachment = (e) => {
-    setState({ ...state, [e.target.name]: e.target.files[0] })
+    setState({ ...state, [e.target.id]: e.target.files[0] })
   }
 
   const handleSubmit = (e) => {
+    console.log(state);
+
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -51,13 +55,17 @@ const ContactPage = () => {
           <form
             name="contact"
             method="post"
-            netlify
+            netlify="true"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             action="/thanks"
           >
-            <input type="hidden" name="form-name" value="file-upload" />
+            <input
+              type="hidden"
+              name="form-name"
+              value="contact"
+            />
 
             <p hidden>
               <label>
@@ -93,13 +101,12 @@ const ContactPage = () => {
               onChange={handleChange}
             />
 
-            <p>
-              <label>
-                File:
-                <br />
-                <input type="file" name="attachment" onChange={handleAttachment} />
-              </label>
-            </p>
+            <Input
+              type="file"
+              id="attachment"
+              onChange={handleAttachment}
+              fullWidth
+            />
 
             <Button
               variant="contained"
