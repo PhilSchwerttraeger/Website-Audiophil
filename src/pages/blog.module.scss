@@ -10,13 +10,21 @@
 }
 
 .sectionNarrow {
+  margin: auto;
+  height: 100%;
   flex-grow: 1;
   margin: auto;
   padding: 50px 10px;
   background-color: #fff;
   max-width: 500px;
-  margin: auto;
   text-align: center;
+}
+
+.sectionNarrow h1 {
+  padding: 16px 0px;
+}
+.sectionNarrow p {
+  padding: 8px 0px;
 }
 
 .main{
