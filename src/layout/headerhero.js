@@ -14,7 +14,7 @@ import videoPoster from "../images/video_snapshot.jpg"
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.heroHeader}>
     <div className={headerStyles.fullscreenVideoWrap}>
-      <video autoPlay playsInline muted muted={true} loop poster={videoPoster}>
+      <video autoPlay playsInline muted loop poster={videoPoster}>
         <source src={video} type="video/mp4" />
       </video>
     </div>
