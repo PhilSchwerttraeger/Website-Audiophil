@@ -5,7 +5,6 @@ import Button from "@material-ui/core/Button"
 import Input from '@material-ui/core/Input'
 import Switch from '@material-ui/core/Switch'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
-import lightblue from '@material-ui/core/colors/lightblue'
 
 import Layout from "../layout/layout"
 import styles from "./blog.module.scss"
