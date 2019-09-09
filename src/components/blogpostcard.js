@@ -33,8 +33,7 @@ const BlogPostCard = (props) => {
       </Link>
       <div className={postStyles.textBlock}>
 
-        <h2><Link to={`/blog/${url}`}>
-          <div dangerouslySetInnerHTML={{ __html: title }} ></div>
+        <h2><Link to={`/blog/${url}`} dangerouslySetInnerHTML={{ __html: title }}>
         </Link></h2>
         <h3>{date}</h3>
 
