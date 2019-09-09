@@ -9,11 +9,12 @@ import Social from './social'
 import MobileMenu from "./mobilemenu"
 
 import video from "../videos/rotation.mp4"
+import videoPoster from "../images/video_snapshot.jpg"
 
 const HeroHeader = ({ siteTitle }) => (
   <header className={headerStyles.heroHeader}>
     <div className={headerStyles.fullscreenVideoWrap}>
-      <video autoPlay muted loop playsInline>
+      <video autoPlay playsInline muted muted={true} loop poster={videoPoster}>
         <source src={video} type="video/mp4" />
       </video>
     </div>
