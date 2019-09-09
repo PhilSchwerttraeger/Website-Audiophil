@@ -3,6 +3,9 @@ import TextField from "@material-ui/core/TextField"
 import { navigate } from 'gatsby-link'
 import Button from "@material-ui/core/Button"
 import Input from '@material-ui/core/Input'
+import Switch from '@material-ui/core/Switch'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import lightblue from '@material-ui/core/colors/lightblue'
 
 import Layout from "../layout/layout"
 import styles from "./blog.module.scss"
@@ -26,13 +29,16 @@ const ContactPage = () => {
     console.log(state);
   }
 
+  const handleShowFileUpload = (e) => {
+    setState({ ...state, [e.target.id]: e.target.checked })
+    console.log(state);
+  }
+
   const handleAttachment = (e) => {
     setState({ ...state, [e.target.id]: e.target.files[0] })
   }
 
   const handleSubmit = (e) => {
-    console.log(state);
-
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -82,10 +88,18 @@ const ContactPage = () => {
             />
 
             <TextField
+              id="band"
+              label="Künstler-/Band-/Projektname"
+              margin="normal"
+              fullWidth
+              onChange={handleChange}
+            />
+
+            <TextField
               id="email"
               type="email"
               autoComplete="email"
-              label="E-Mail"
+              label="E-Mail-Adresse"
               margin="normal"
               fullWidth
               onChange={handleChange}
@@ -101,12 +115,44 @@ const ContactPage = () => {
               onChange={handleChange}
             />
 
-            <Input
-              type="file"
-              id="attachment"
-              onChange={handleAttachment}
-              fullWidth
-            />
+
+            <div style={{ padding: "16px 0px" }}>
+              <FormControlLabel
+                control={
+                  <Switch
+                    id="hasFileUpload"
+                    onChange={handleShowFileUpload}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'checkbox file upload' }}
+                    fullWidth
+                  />
+                }
+                label="File Upload"
+              />
+            </div>
+
+
+            {state.hasFileUpload ?
+              <div style={{ padding: "16px 0px" }}>
+                <Input
+                  type="file"
+                  id="attachment"
+                  onChange={handleAttachment}
+                />
+                <div style={{ fontSize: "13px", marginTop: "16px" }}>(Dateien größer als 4MB bitte per <a
+                  href="https://www.wetransfer.com"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  WeTransfer
+                </a>, <a
+                    href="https://www.dropbox.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Dropbox
+                </a>
+                  , o.ä. übermitteln)</div>
+              </div> : <></>
+            }
 
             <Button
               variant="contained"
