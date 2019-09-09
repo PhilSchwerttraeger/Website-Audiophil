@@ -47,12 +47,12 @@ const disciplines = [
   {
     title: "Schalldämmung",
     text:
-      "Durch unsere spezielle Raum-in-Raum-Konstruktion erreichen wir sehr hohe akustische Dämmwerte, welche eine ideale Aufnahme- und Abhörumgebung schafft.",
+      "Durch unsere spezielle Raum-in-Raum-Konstruktion erreichen wir sehr hohe akustische Dämmwerte, welche eine ideale Aufnahme- und Abhörumgebung schaffen.",
   },
   {
     title: "Variable Akustik",
     text:
-      "Diverse selbst entwickelte Akustikelemente schaffen eine flexible Raumakustik, die sich an alle künstlerischen Anforderungen anpasst.",
+      "Diverse selbst entwickelte Akustikelemente schaffen eine flexible Raumakustik, die sich individuell an alle möglichen künstlerischen Anforderungen anpassen lässt.",
   },
   {
     title: "LED und Sternerdung",
@@ -60,9 +60,9 @@ const disciplines = [
       "Um möglichst viele Störeinflüsse wie elektrische Felder und Surren von Netzteilen zu eliminieren, setzen wir u.a. konsequent auf LED-Beleuchtung mit Niedervoltspeisung und eine separate Sternerdung aller Studiogeräte.",
   },
   {
-    title: "Smarte Gebäudetechnik",
+    title: "Gebäudetechnik",
     text:
-      "Das Gebäude ist voll vernetzt und bietet daher viele Vorzüge, beispielsweise voll-automatisierte Regelung von Lüftung, Klima, Heizung oder auch Licht.",
+      "Das Gebäude ist KNX-vernetzt und bietet Vorzüge wie voll-automatisierte Lüftung, Klima/Heizung und Lichtsysteme. Zudem hat das Gebäude Photovoltaikmodule auf dem Dach und große Akkus, um 100% autark aus erneuerbaren Energien betrieben zu werden.",
   },
 ]
 

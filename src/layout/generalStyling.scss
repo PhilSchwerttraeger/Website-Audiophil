@@ -15,13 +15,6 @@
   width: 100%;
 }
 
-
-@media(max-width: 500px) {
-  .wp-block-image figcaption {
-    font-size: 13px;
-  }
-}
-
 .wp-block-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -29,6 +22,10 @@
   list-style-type: none;
   padding-inline-start: 0;
   gap: 1rem;
+  margin: 20px 0px;
+  font-size: 1rem;
+  color: $ternary;
+  text-align: center;
 }
 .wp-block-gallery img {
   max-width: 100%;
@@ -39,6 +36,15 @@
 
 .wp-block-gallery figure {
   margin: 0;
+}
+
+@media(max-width: 500px) {
+  .wp-block-image figcaption {
+    font-size: 13px;
+  }
+  .wp-block-gallery figcaption {
+    font-size: 13px;
+  }
 }
 
 .embed-container {

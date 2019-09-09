@@ -113,8 +113,7 @@ const blogpost = ({ data }) => {
                 <span>&#x2B11; zurück</span>
               </Link>
             </div>
-            <h1 className={blogPostStyling.heading}>
-              {data.wordpressPost.title}
+            <h1 className={blogPostStyling.heading} dangerouslySetInnerHTML={{ __html: data.wordpressPost.title }}>
             </h1>
             <span className={blogPostStyling.date}>
               {data.wordpressPost.date}

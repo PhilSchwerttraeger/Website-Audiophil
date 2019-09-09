@@ -134,3 +134,12 @@
   filter: brightness(50%);
   transition: all .5s;
 }
+
+.wordpressContent ol {
+  @extend p;
+  margin-left: 36px;
+  padding: 20px 0px;
+}
+.wordpressContent ol li {
+  padding: 2px 0px;
+}
