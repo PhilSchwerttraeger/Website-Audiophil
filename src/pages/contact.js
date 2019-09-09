@@ -3,6 +3,9 @@ import TextField from "@material-ui/core/TextField"
 import { navigate } from 'gatsby-link'
 import Button from "@material-ui/core/Button"
 import Input from '@material-ui/core/Input'
+import Switch from '@material-ui/core/Switch'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import lightblue from '@material-ui/core/colors/lightblue'
 
 import Layout from "../layout/layout"
 import styles from "./blog.module.scss"
@@ -26,13 +29,16 @@ const ContactPage = () => {
     console.log(state);
   }
 
+  const handleShowFileUpload = (e) => {
+    setState({ ...state, [e.target.id]: e.target.checked })
+    console.log(state);
+  }
+
   const handleAttachment = (e) => {
     setState({ ...state, [e.target.id]: e.target.files[0] })
   }
 
   const handleSubmit = (e) => {
-    console.log(state);
-
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -101,12 +107,32 @@ const ContactPage = () => {
               onChange={handleChange}
             />
 
-            <Input
-              type="file"
-              id="attachment"
-              onChange={handleAttachment}
-              fullWidth
-            />
+
+            <div style={{ padding: "16px 0px" }}>
+              <FormControlLabel
+                control={
+                  <Switch
+                    id="hasFileUpload"
+                    onChange={handleShowFileUpload}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'checkbox file upload' }}
+                    fullWidth
+                  />
+                }
+                label="File Upload (Files größer als 4MB bitte per WeTransfer, Dropbox, o.ä. übermitteln."
+              />
+            </div>
+
+
+            {state.hasFileUpload ?
+              <div style={{ padding: "16px 0px" }}>
+                <Input
+                  type="file"
+                  id="attachment"
+                  onChange={handleAttachment}
+                />
+              </div> : <></>
+            }
 
             <Button
               variant="contained"
