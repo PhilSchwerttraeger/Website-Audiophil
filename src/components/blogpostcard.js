@@ -6,9 +6,11 @@ import postStyles from "./blogpostcard.module.scss"
 const BlogPostCard = (props) => {
   const { title, date, categories, image, url } = props;
 
+  /*
   if (image) {
     console.log(image);
   }
+  */
 
   return (
     <div className={postStyles.post}>
@@ -31,8 +33,7 @@ const BlogPostCard = (props) => {
       </Link>
       <div className={postStyles.textBlock}>
 
-        <h2><Link to={`/blog/${url}`}>
-          <div dangerouslySetInnerHTML={{ __html: title }} ></div>
+        <h2><Link to={`/blog/${url}`} dangerouslySetInnerHTML={{ __html: title }}>
         </Link></h2>
         <h3>{date}</h3>
 
@@ -42,9 +43,9 @@ const BlogPostCard = (props) => {
               <Chip
                 key={category.name}
                 variant="outlined"
-                label={category.name}
+                label={<div dangerouslySetInnerHTML={{ __html: category.name }} ></div>}
                 clickable
-                onClick={() => navigate(`/${category.name}`)}
+                onClick={() => navigate(`/category/${category.slug}`)}
                 style={{ color: "#597F97" }}
               />
             )

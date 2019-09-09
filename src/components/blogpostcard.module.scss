@@ -25,7 +25,7 @@
 
 .textBlock a {
   background: linear-gradient(
-      to bottom, $secondary 0%,
+      to bottom, $ternary 0%,
       $ternary 100%
     );
   background-position: 0 100%;
@@ -39,4 +39,9 @@
 .textBlock a:hover {
   color: $primary;
   background-size: 4px 50px;
+}
+
+.coverimage:hover {
+  filter: brightness(50%);
+  transition: all .5s;
 }
