@@ -88,10 +88,18 @@ const ContactPage = () => {
             />
 
             <TextField
+              id="band"
+              label="Künstler-/Band-/Projektname"
+              margin="normal"
+              fullWidth
+              onChange={handleChange}
+            />
+
+            <TextField
               id="email"
               type="email"
               autoComplete="email"
-              label="E-Mail"
+              label="E-Mail-Adresse"
               margin="normal"
               fullWidth
               onChange={handleChange}
@@ -119,7 +127,7 @@ const ContactPage = () => {
                     fullWidth
                   />
                 }
-                label="File Upload (Files größer als 4MB bitte per WeTransfer, Dropbox, o.ä. übermitteln."
+                label="File Upload"
               />
             </div>
 
@@ -131,6 +139,18 @@ const ContactPage = () => {
                   id="attachment"
                   onChange={handleAttachment}
                 />
+                <div style={{ fontSize: "13px", marginTop: "16px" }}>(Dateien größer als 4MB bitte per <a
+                  href="https://www.wetransfer.com"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  WeTransfer
+                </a>, <a
+                    href="https://www.dropbox.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Dropbox
+                </a>
+                  , o.ä. übermitteln)</div>
               </div> : <></>
             }
 
