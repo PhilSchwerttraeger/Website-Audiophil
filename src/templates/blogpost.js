@@ -26,6 +26,7 @@ export const query = graphql`
       content
       categories {
         name
+        slug
       }
     }
   }
@@ -127,7 +128,7 @@ const blogpost = ({ data }) => {
                   variant="outlined"
                   label={category.name}
                   clickable
-                  onClick={() => navigate(`/${category.name}`)}
+                  onClick={() => navigate(`/category/${category.slug}`)}
                   style={{ color: "#597F97", marginRight: "5px" }}
                 />
               )

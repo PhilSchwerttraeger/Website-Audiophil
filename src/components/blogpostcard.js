@@ -6,9 +6,11 @@ import postStyles from "./blogpostcard.module.scss"
 const BlogPostCard = (props) => {
   const { title, date, categories, image, url } = props;
 
+  /*
   if (image) {
     console.log(image);
   }
+  */
 
   return (
     <div className={postStyles.post}>
@@ -42,9 +44,9 @@ const BlogPostCard = (props) => {
               <Chip
                 key={category.name}
                 variant="outlined"
-                label={category.name}
+                label={<div dangerouslySetInnerHTML={{ __html: category.name }} ></div>}
                 clickable
-                onClick={() => navigate(`/${category.name}`)}
+                onClick={() => navigate(`/category/${category.slug}`)}
                 style={{ color: "#597F97" }}
               />
             )

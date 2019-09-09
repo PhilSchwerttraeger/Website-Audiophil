@@ -21,6 +21,7 @@ const BlogPage = () => {
             id
             categories {
               name
+              slug
             }
             acf {
               xtra_img {
@@ -49,6 +50,7 @@ const BlogPage = () => {
         </div>
         <div className={blogStyles.grid}>
           {posts.allWordpressPost.edges.map(post => {
+            //console.log(post.node);
             return (
               <BlogPostCard
                 key={post.node.id}
