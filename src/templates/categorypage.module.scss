@@ -1,0 +1,73 @@
+@import "../layout/colors.scss";
+
+.section {
+  flex-grow: 1;
+  margin: auto;
+  padding: 50px 10px;
+  background-color: #fff;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.main{
+  max-width: 1280px;
+  margin: auto;
+  padding: 0px 16px 0px;
+}
+
+// Title + Date (+ ggf. tags)
+.main h1 {
+  margin: 100px 0px 50px;
+  color: $ternary;
+  font-size: 48px;
+}
+@media(max-width: 600px) {
+  .main h1 {
+    margin: 60px 0px 20px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media(max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 760px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.postsTotal {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: $secondary;
+  padding: 32px 0px;
+}
+
+.released {
+  text-align: center;
+  font-size: 14px;
+  color: $secondary;
+  opacity: 0.7;
+  margin-bottom: 80px;
+}
+
+.main hr {
+  opacity: 0.7;
+  margin: 80px 0px 8px;
+}
