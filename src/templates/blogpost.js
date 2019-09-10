@@ -12,6 +12,9 @@ import parse from 'html-react-parser'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
+// eslint-disable-next-line
+const Latex = require('react-latex')
+
 export const query = graphql`
   query(
     $slug: String!
@@ -99,6 +102,10 @@ const blogpost = ({ data }) => {
 
   return (
     <Layout>
+      <link
+        href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
+        rel="stylesheet"
+      />
       <SEO title={data.wordpressPost.title} />
 
       <section className={blogPostStyling.container}>

@@ -58,7 +58,11 @@ const BlogPage = () => {
                 title={post.node.title}
                 date={post.node.date}
                 categories={post.node.categories}
-                image={(post.node.acf.xtra_img && post.node.acf.xtra_img.localFile.childImageSharp.fluid) ? post.node.acf.xtra_img.localFile.childImageSharp.fluid.src : null}
+                image={(
+                  post.node.acf &&
+                  post.node.acf.xtra_img &&
+                  post.node.acf.xtra_img.localFile && post.node.acf.xtra_img.localFile.childImageSharp && post.node.acf.xtra_img.localFile.childImageSharp.fluid
+                ) ? post.node.acf.xtra_img.localFile.childImageSharp.fluid.src : null}
                 className={blogStyles.gridItem}
               />
             )

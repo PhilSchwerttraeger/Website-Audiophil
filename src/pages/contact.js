@@ -3,7 +3,6 @@ import TextField from "@material-ui/core/TextField"
 import { navigate } from 'gatsby-link'
 import Button from "@material-ui/core/Button"
 import Input from '@material-ui/core/Input'
-import Switch from '@material-ui/core/Switch'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 

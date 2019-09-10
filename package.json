@@ -30,6 +30,7 @@
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.12",
     "react-image-lightbox": "^5.1.0",
+    "react-latex": "^1.4.0",
     "react-player": "^1.12.0",
     "smooth-scroll": "^16.1.0"
   },
