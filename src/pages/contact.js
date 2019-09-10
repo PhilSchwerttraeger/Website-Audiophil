@@ -80,6 +80,7 @@ const ContactPage = () => {
 
             <TextField
               id="name"
+              name="name"
               label="Name"
               margin="normal"
               fullWidth
@@ -88,6 +89,7 @@ const ContactPage = () => {
 
             <TextField
               id="band"
+              name="band"
               label="Künstler-/Band-/Projektname"
               margin="normal"
               fullWidth
@@ -96,6 +98,7 @@ const ContactPage = () => {
 
             <TextField
               id="email"
+              name="email"
               type="email"
               autoComplete="email"
               label="E-Mail-Adresse"
@@ -106,6 +109,7 @@ const ContactPage = () => {
 
             <TextField
               id="message"
+              name="message"
               label="Nachricht"
               multiline
               rowsMax="20"
@@ -134,8 +138,9 @@ const ContactPage = () => {
             {state.hasFileUpload ?
               <div style={{ padding: "16px 0px" }}>
                 <Input
-                  type="file"
+                  name="attachment"
                   id="attachment"
+                  type="file"
                   onChange={handleAttachment}
                 />
                 <div style={{ fontSize: "13px", marginTop: "16px" }}>(Dateien größer als 4MB bitte per <a
