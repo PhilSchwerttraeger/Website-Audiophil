@@ -24,7 +24,7 @@ const BlogPostCard = (props) => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 50%",
             //borderRadius: "25px",
-            minHeight: 200,
+            minHeight: 250,
             borderTopRightRadius: 10,
             borderTopLeftRadius: 10,
 
@@ -32,9 +32,11 @@ const BlogPostCard = (props) => {
         ></div>
       </Link>
       <div className={postStyles.textBlock}>
-
-        <h2><Link to={`/blog/${url}`} dangerouslySetInnerHTML={{ __html: title }}>
-        </Link></h2>
+        {console.log(title)}
+        <h2>
+          <Link to={`/blog/${url}`} dangerouslySetInnerHTML={{ __html: title }}>
+          </Link>
+        </h2>
         <h3>{date}</h3>
 
         <div className={postStyles.chip}>
