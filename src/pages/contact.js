@@ -4,6 +4,7 @@ import { navigate } from 'gatsby-link'
 import Button from "@material-ui/core/Button"
 import Input from '@material-ui/core/Input'
 import Switch from '@material-ui/core/Switch'
+import Checkbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 import Layout from "../layout/layout"
@@ -122,12 +123,10 @@ const ContactPage = () => {
             <div style={{ padding: "16px 0px" }}>
               <FormControlLabel
                 control={
-                  <Switch
+                  <Checkbox
                     id="hasFileUpload"
                     onChange={handleShowFileUpload}
                     color="primary"
-                    inputProps={{ 'aria-label': 'checkbox file upload' }}
-                    fullWidth
                   />
                 }
                 label="File Upload"
