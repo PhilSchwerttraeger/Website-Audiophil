@@ -55,18 +55,19 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  column-gap: 2.5rem;
+  row-gap: 5rem;
 }
 @media(max-width: 1200px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
   }
 }
 @media(max-width: 760px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 }
 
