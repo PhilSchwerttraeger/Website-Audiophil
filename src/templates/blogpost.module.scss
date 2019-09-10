@@ -143,3 +143,18 @@
 .wordpressContent ol li {
   padding: 2px 0px;
 }
+
+.wordpressContent ul {
+  @extend p;
+  margin-left: 36px;
+  padding: 20px 0px;
+}
+.wordpressContent ul li {
+  padding: 2px 0px;
+}
+
+.wordpressContent table {
+  @extend p;
+  padding: 36px 0px 52px;
+  width: 100%;
+}
