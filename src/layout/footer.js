@@ -33,12 +33,12 @@ const Footer = () =>
       <section className={footerStyles.sectionC}>
         <ul>
           <li>
-            <Link to="/impressum">
+            <Link to="/imprint">
               Impressum
             </Link>
           </li>
           <li>
-            <Link to="/datenschutz">
+            <Link to="/privacy">
               Datenschutz
             </Link>
           </li>

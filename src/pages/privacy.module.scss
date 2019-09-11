@@ -1,0 +1,53 @@
+@import "../layout/colors.scss";
+
+.main{
+  max-width: 1280px;
+  margin: auto;
+  
+  padding: 50px 10px;
+  max-width: 800px;
+}
+
+// Title + Date (+ ggf. tags)
+.main h1 {
+  color: $ternary;
+  font-size: 48px;
+  padding: 50px 0px 20px;
+}
+.main h2 {
+  color: $ternary;
+  font-size: 28px;
+  padding: 16px 0px 8px;
+}
+.main h3 {
+  color: $ternary;
+  font-size: 22px;
+  padding: 16px 0px 8px;
+}
+.main p {
+  font-size: 16px;
+  padding: 16px 0px;
+}
+.main ol, ul {
+  @extend p;
+  margin-left: 36px;
+  padding: 20px 0px;
+}
+
+@media(max-width: 600px) {
+  .main h1 {
+    font-size: 36px;
+    padding: 20px 0px 10px;
+  }
+  .main h2 {
+    font-size: 22px;
+    padding: 8px 0px 4px;
+  }
+  .main h2 {
+    font-size: 16px;
+    padding: 8px 0px 4px;
+  }
+  .main p {
+    font-size: 12px;
+  }
+}

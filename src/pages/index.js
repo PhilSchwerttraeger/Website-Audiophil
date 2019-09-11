@@ -13,13 +13,13 @@ const hardNumbers = [
   {
     title: "100 m²",
     subtitle: "Gebäudefläche",
-    text: "Genug Platz für kleine und mittlere Produktionen.",
+    text: "Aufgeteilt in <b>5 Räume</b>: Regie, Aufnahme, Lobby, WC und Hausanschluss. Genug Platz für kleine und mittlere Produktionen.",
   },
   {
     title: "3,80 m",
     subtitle: "Raumhöhe",
     text:
-      "Für ein großes Raumvolumen, besser verteilte Raummoden und natürlich die Möglichkeit flexibel auch mal von oben zu mikrofonieren.",
+      "Für ein großes <b>Raumvolumen</b>, besser verteilte Raummoden und natürlich die Möglichkeit flexibel auch mal von oben zu mikrofonieren.",
   },
   /*
   {
@@ -33,13 +33,13 @@ const hardNumbers = [
     title: "620 m²",
     subtitle: "Außenanlage",
     text:
-      "Hinter dem Gebäude befindet sich direkt eine kleine Außenanlage mit Terrasse, Grill und Pool.",
+      "Hinter dem Gebäude befindet sich eine Außenanlage mit Terrasse, Grill und <b>Pool</b>. Ideal zur Entspannung und Abendgestaltung.",
   },
   {
     title: "ab 38 Hz",
     subtitle: ">60dB",
     text:
-      "Mit unserer speziellen Raum-in-Raum-Konstruktion erreichen wir ab 38Hz aufwärts eine Schallreduktion von über 60dB.",
+      "Mit unserer speziellen Inside-Out <b>Raum-in-Raum-Konstruktion</b> erreichen wir ab 38Hz aufwärts eine Schallreduktion von über 60dB.",
   },
 ]
 
@@ -47,22 +47,22 @@ const disciplines = [
   {
     title: "Schalldämmung",
     text:
-      "Durch unsere spezielle Raum-in-Raum-Konstruktion erreichen wir sehr hohe akustische Dämmwerte, welche eine ideale Aufnahme- und Abhörumgebung schaffen.",
+      "Durch unsere Inside-Out Raum-in-Raum-Konstruktion erreichen wir hohe akustische Dämmwerte, welche <b>ideale Aufnahme- und Abhörumgebungen</b> schaffen. Durch diese Isolation lässt sich Material bereits bei der Aufnahme optimal über die Monitore bewerten.",
   },
   {
     title: "Variable Akustik",
     text:
-      "Diverse selbst entwickelte Akustikelemente schaffen eine flexible Raumakustik, die sich individuell an alle möglichen künstlerischen Anforderungen anpassen lässt.",
+      "Diverse selbst entwickelte Akustikelemente schaffen eine <b>flexible Raumakustik</b>, die sich individuell an alle möglichen künstlerischen Anforderungen anpassen lässt. Von knochentrocken bis sehr räumlich.",
   },
   {
     title: "LED und Sternerdung",
     text:
-      "Um möglichst viele Störeinflüsse wie elektrische Felder und Surren von Netzteilen zu eliminieren, setzen wir u.a. konsequent auf LED-Beleuchtung mit Niedervoltspeisung und eine separate Sternerdung aller Studiogeräte.",
+      "Um möglichst viele Störeinflüsse wie elektrische Felder und Netzteilsurren zu eliminieren, setzen wir konsequent auf <b>LED-Beleuchtung mit Niedervoltspeisung</b> und separate <b>Sternerdung</b> aller Studiogeräte.",
   },
   {
     title: "Gebäudetechnik",
     text:
-      "Das Gebäude ist KNX-vernetzt und bietet Vorzüge wie voll-automatisierte Lüftung, Klima/Heizung und Lichtsysteme. Zudem hat das Gebäude Photovoltaikmodule auf dem Dach und große Akkus, um 100% autark aus erneuerbaren Energien betrieben zu werden.",
+      "Das Gebäude ist <b>KNX-vernetzt</b> und bietet Vorzüge wie voll-automatisierte Lüftung, Klima/Heizung und Lichtsysteme. Zudem hat das Gebäude eine Photovoltaikanlage mit großen Akkus, um <b>100% autark aus erneuerbaren Energien</b> betrieben zu werden.",
   },
 ]
 
@@ -173,7 +173,7 @@ const IndexPage = () => (
                 <div className={layoutStyles.card}>
                   <h3>{item.title}</h3>
                   <h4>{item.subtitle}</h4>
-                  <p>{item.text}</p>
+                  <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
                 </div>
               </Grid>
             )
@@ -211,7 +211,7 @@ const IndexPage = () => (
                 className={layoutStyles.discipline}
               >
                 <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
               </div>
             )
           })}
@@ -261,9 +261,7 @@ const IndexPage = () => (
                 Viel hilft viel: <br /> Ein Projekt der großen Zahlen
               </h2>
               <p>
-                Nicht nur von der schieren Masse an verschiedenen Disziplinen,
-                die es beim Studiobau zu beachten gilt, sondern auch von der
-                schieren Masse an... Masse ist dieses Projekt einfach riesig.
+                Nicht nur von der schieren Masse an verschiedenen Disziplinen, sondern auch von der schieren Masse an... <b>Masse</b> ist dieses Projekt einfach riesig.
               </p>
             </div>
           </Grid>
