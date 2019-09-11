@@ -261,9 +261,7 @@ const IndexPage = () => (
                 Viel hilft viel: <br /> Ein Projekt der großen Zahlen
               </h2>
               <p>
-                Nicht nur von der schieren Masse an verschiedenen Disziplinen,
-                die es beim Studiobau zu beachten gilt, sondern auch von der
-                schieren Masse an... Masse ist dieses Projekt einfach riesig.
+                Nicht nur von der schieren Masse an verschiedenen Disziplinen, sondern auch von der schieren Masse an... <b>Masse</b> ist dieses Projekt einfach riesig.
               </p>
             </div>
           </Grid>
