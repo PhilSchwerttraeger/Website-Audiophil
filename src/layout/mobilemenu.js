@@ -12,19 +12,19 @@ class MobileMenu extends React.Component {
   }
 
   openNav() {
-    console.log(this.state);
     this.setState({
       open: true,
       width: "100%"
     });
+    document.body.classList.add("fixedPosition");
   }
 
   closeNav() {
-    console.log(this.state);
     this.setState({
       open: false,
       width: "0%"
     });
+    document.body.classList.remove("fixedPosition");
   }
 
   render() {
