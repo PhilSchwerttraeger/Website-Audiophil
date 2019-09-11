@@ -38,7 +38,7 @@ const Footer = () =>
             </Link>
           </li>
           <li>
-            <Link to="/datenschutz">
+            <Link to="/privacy">
               Datenschutz
             </Link>
           </li>
