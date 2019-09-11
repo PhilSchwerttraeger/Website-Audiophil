@@ -23,10 +23,12 @@
   padding-inline-start: 0;
   gap: 1rem;
   margin: 20px 0px;
+  margin-left: 0px !important;
   font-size: 1rem;
   color: $ternary;
   text-align: center;
 }
+
 .wp-block-gallery img {
   max-width: 100%;
 }
