@@ -130,6 +130,11 @@
   padding: 40px 50px;
 }
 
+.featureContainer p b {
+  color: $ternary;
+  //font-size: 1.1rem;
+}
+
 @media (max-width: 550px) {
   .featureContainer {
     padding: 10px;
@@ -202,6 +207,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
+}
+
+.disciplines p b {
+  color: $ternary;
+  //font-size: 1.1rem;
 }
 
 @media(max-width: 500px) {
