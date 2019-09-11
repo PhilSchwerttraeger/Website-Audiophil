@@ -42,6 +42,10 @@
   color: $ternary;
   font-size: 28px;
 }
+.main h3 {
+  color: $ternary;
+  font-size: 22px;
+}
 @media(max-width: 600px) {
   .main h1 {
     font-size: 36px;

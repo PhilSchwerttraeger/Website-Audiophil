@@ -33,7 +33,7 @@ const Footer = () =>
       <section className={footerStyles.sectionC}>
         <ul>
           <li>
-            <Link to="/impressum">
+            <Link to="/imprint">
               Impressum
             </Link>
           </li>
