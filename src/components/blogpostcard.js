@@ -32,14 +32,13 @@ const BlogPostCard = (props) => {
         ></div>
       </Link>
       <div className={postStyles.textBlock}>
-        {console.log(title)}
         <h2>
           <Link to={`/blog/${url}`} dangerouslySetInnerHTML={{ __html: title }}>
           </Link>
         </h2>
         <h3>{date}</h3>
 
-        <div className={postStyles.chip}>
+        <div>
           {categories.map(category => {
             return (
               <Chip
@@ -49,6 +48,7 @@ const BlogPostCard = (props) => {
                 clickable
                 onClick={() => navigate(`/category/${category.slug}`)}
                 style={{ color: "#597F97" }}
+                className={postStyles.chip}
               />
             )
           })}
