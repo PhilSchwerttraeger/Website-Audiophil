@@ -82,9 +82,9 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
 
         // Find hard-coded links in paragraphs and replace with relative links 
         if (domNode.attribs && domNode.name === "a" && domNode.children[0].name === undefined) {
-          console.log("vorher: " + domNode.attribs.href);
+          //console.log("vorher: " + domNode.attribs.href);
           domNode.attribs.href = domNode.attribs.href.replace('https://studiobau.philippschwetschenau.de', '/blog');
-          console.log("nachher: " + domNode.attribs.href);
+          //console.log("nachher: " + domNode.attribs.href);
         }
       }
     });
