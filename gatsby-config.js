@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "https://studiobau.philippschwetschenau.de",
+        baseUrl: "https://studio.backend.hosting122542.a2fc7.netcup.net",
         protocol: "https",
         hostingWPCOM: false,
         useACF: true,
