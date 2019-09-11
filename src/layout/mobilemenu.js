@@ -42,13 +42,13 @@ class MobileMenu extends React.Component {
             &times;
           </span>
           <div className={mobileMenuStyles.overlayContent}>
-            <Link id="home" className="menu-item" to="/">
+            <Link id="home" className="menu-item" to="/" onClick={this.closeNav.bind(this)}>
               Home
             </Link>
-            <Link id="blog" className="menu-item" to="/blog">
+            <Link id="blog" className="menu-item" to="/blog" onClick={this.closeNav.bind(this)}>
               Blog
             </Link>
-            <Link id="contact" className="menu-item" to="/contact">
+            <Link id="contact" className="menu-item" to="/contact" onClick={this.closeNav.bind(this)}>
               Kontakt
             </Link>
           </div>
