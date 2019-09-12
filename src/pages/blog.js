@@ -43,7 +43,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <main className={blogStyles.main}>
-        <SEO title="Blog" />
+        <SEO title="audiophil | Blog" />
         <div className={blogStyles.head}>
           <h1>Blog</h1>
           <div className={blogStyles.postsTotal}>Posts gesamt: {posts.allWordpressPost.totalCount}</div>

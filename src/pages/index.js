@@ -95,7 +95,7 @@ const hardNumbers2 = [
 
 const IndexPage = () => (
   <Layout type="hero">
-    <SEO title="Home" />
+    <SEO title="audiophil" />
 
     {/* SECTION A: WELCOME */}
     <section id="section-a" className={layoutStyles.section}>
