@@ -9,11 +9,6 @@ import patch from "../images/patch.png"
 
 import ReactGA from 'react-ga';
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-142374149-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
-
 const hardNumbers = [
   {
     title: "100 m²",
@@ -99,7 +94,8 @@ const hardNumbers2 = [
 ]
 
 const IndexPage = () => {
-  initializeReactGA();
+  ReactGA.initialize('UA-142374149-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <Layout type="hero">
       <SEO title="audiophil" />
@@ -121,9 +117,9 @@ const IndexPage = () => {
               einigen Jahren habe ich einen guten Freund kennengelernt, der
               zusammen mit mir dieses Ziel erreichen möchte. Diese Seite enthält
             einen <Link to="/blog">Blog</Link>, in welchem ich den aktuellen
-                  Stand unserer Planung und unseres Baus festhalte, aber auch
-                  detailliert auf alle technischen und bauakustischen Hintergründe
-                  eingehe.
+                    Stand unserer Planung und unseres Baus festhalte, aber auch
+                    detailliert auf alle technischen und bauakustischen Hintergründe
+                    eingehe.
           </p>
             <p>
               Da ich nahezu den ganzen Bau von der Planung bis zum fertigen Ausbau
