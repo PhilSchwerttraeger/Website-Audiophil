@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `audiophil`,
-    description: `Modernes und akustisch optimiertes Tonstudio in Erfurt; Inhaber: Philipp Schwetschenau`,
+    description: `Modernes, akustisch optimiertes Tonstudio in Erfurt`,
     email: "hello@audiophilproduction.de",
   },
   plugins: [

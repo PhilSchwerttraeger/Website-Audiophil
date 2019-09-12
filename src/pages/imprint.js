@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const ImprintPage = () => (
   <Layout>
     <main className={styles.main}>
-      <SEO title="Home" />
+      <SEO title="audiophil | Impressum" />
       <h1>Impressum</h1>
 
       <h2>Angaben gemäß § 5 TMG</h2>

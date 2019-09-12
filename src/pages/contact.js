@@ -55,7 +55,7 @@ const ContactPage = () => {
     <Layout>
       <section className={styles.sectionNarrow}>
         <main className={styles.main}>
-          <SEO title="Kontakt" />
+          <SEO title="audiophil | Kontakt" />
           <h1>Kontakt</h1>
           <form
             name="contact"
