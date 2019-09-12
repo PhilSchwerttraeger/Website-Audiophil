@@ -31,6 +31,17 @@ export const query = graphql`
         name
         slug
       }
+      acf {
+        xtra_img {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 710) {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   }
 `
@@ -100,16 +111,17 @@ const blogpost = ({ data }) => {
 
   let newContent = processHTML(data.wordpressPost, setIsOpen, setPhotoIndex);
 
+  let postImage = (
+    data.wordpressPost.acf &&
+    data.wordpressPost.acf.xtra_img &&
+    data.wordpressPost.acf.xtra_img.localFile && data.wordpressPost.acf.xtra_img.localFile.childImageSharp && data.wordpressPost.acf.xtra_img.localFile.childImageSharp.fluid
+  ) ? data.wordpressPost.acf.xtra_img.localFile.childImageSharp.fluid.src : null;
+
   return (
     <Layout>
-      <link
-        href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
-        rel="stylesheet"
-      />
-      <SEO title={data.wordpressPost.title} />
+      <SEO title={data.wordpressPost.title} image={postImage} />
 
       <section className={blogPostStyling.container}>
-
         <Grid
           container
           style={{ justifyContent: "space-between" }}
