@@ -50,7 +50,7 @@ const HeroHeader = ({ siteTitle }) => (
     </div>
 
     <div className={headerStyles.section07}>
-      <a href="#section-a">
+      <a href="#welcome">
         <span></span>
         <span></span>
         <span></span>
