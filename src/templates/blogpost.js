@@ -95,6 +95,7 @@ const processHTML = (data, setIsOpen, setPhotoIndex) => {
         if (domNode.attribs && domNode.name === "a" && domNode.children[0].name === undefined) {
           //console.log("vorher: " + domNode.attribs.href);
           domNode.attribs.href = domNode.attribs.href.replace('https://studiobau.philippschwetschenau.de', '/blog');
+          domNode.attribs.href = domNode.attribs.href.replace('https://studio.backend.hosting122542.a2fc7.netcup.net', '/blog');
           //console.log("nachher: " + domNode.attribs.href);
         }
       }
