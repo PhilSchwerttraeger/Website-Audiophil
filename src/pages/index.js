@@ -97,9 +97,9 @@ const IndexPage = () => {
       <SEO title="audiophil" />
 
       {/* SECTION A: WELCOME */}
-      <section id="section-a" className={layoutStyles.section}>
+      <section id="welcome" className={layoutStyles.section}>
         <div className={layoutStyles.contentWrap}>
-          <h2 id="section-a">Hallo Internet!</h2>
+          <h2>Hallo Internet!</h2>
           <div className={layoutStyles.contentText}>
             <p>
               Seitdem ich denken kann begeistere ich mich für Musik und Technik.
@@ -113,9 +113,9 @@ const IndexPage = () => {
               einigen Jahren habe ich einen guten Freund kennengelernt, der
               zusammen mit mir dieses Ziel erreichen möchte. Diese Seite enthält
             einen <Link to="/blog">Blog</Link>, in welchem ich den aktuellen
-                      Stand unserer Planung und unseres Baus festhalte, aber auch
-                      detailliert auf alle technischen und bauakustischen Hintergründe
-                      eingehe.
+                          Stand unserer Planung und unseres Baus festhalte, aber auch
+                          detailliert auf alle technischen und bauakustischen Hintergründe
+                          eingehe.
           </p>
             <p>
               Da ich nahezu den ganzen Bau von der Planung bis zum fertigen Ausbau
@@ -142,7 +142,7 @@ const IndexPage = () => {
       </section>
 
       {/* SECTION B: FEATURES */}
-      <section id="section-b" className={layoutStyles.section}>
+      <section id="features" className={layoutStyles.section}>
         <div
           className={layoutStyles.contentWrap}
           style={{
@@ -152,7 +152,7 @@ const IndexPage = () => {
             borderRadius: "25px",
           }}
         >
-          <h2 className={layoutStyles.featuresTitle} id="section-b">
+          <h2 className={layoutStyles.featuresTitle}>
             Harte Zahlen
         </h2>
           <Grid
@@ -182,9 +182,9 @@ const IndexPage = () => {
       </section>
 
       {/* SECTION C: DREAM */}
-      <section id="section-c" className={layoutStyles.section}>
+      <section id="waslangewaehrt" className={layoutStyles.section}>
         <div className={layoutStyles.contentWrap}>
-          <h2 id="section-c">Was lange währt, wird endlich gut.</h2>
+          <h2>Was lange währt, wird endlich gut.</h2>
           <div className={layoutStyles.contentText}>
             <p>
               Kaum zu glauben, aber bereits Anfang 2014 begann dieses Projekt.
@@ -219,7 +219,7 @@ const IndexPage = () => {
       </section>
 
       {/* SECTION D: Hard Numbers 2 */}
-      <section id="section-d" className={layoutStyles.section}>
+      <section id="vielhilftviel" className={layoutStyles.section}>
         <div
           className={layoutStyles.contentWrap}
           style={{
