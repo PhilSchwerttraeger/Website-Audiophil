@@ -84,6 +84,7 @@ module.exports = {
         siteSpeedSampleRate: 10,
         cookieDomain: "audiophil.netlify.com",
       }
-    }
+    },
+    "gatsby-plugin-offline",
   ],
 }
