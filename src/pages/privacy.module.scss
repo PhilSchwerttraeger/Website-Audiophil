@@ -34,11 +34,6 @@
   padding: 20px 0px;
 }
 
-.mobilelinklist {
-  @extend p;
-  padding: 20px 0px;
-}
-
 @media(max-width: 600px) {
   .main h1 {
     font-size: 36px;

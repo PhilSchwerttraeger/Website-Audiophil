@@ -49,7 +49,11 @@
 
 .sectionE {
   display: none;
-}  
+  
+  ul {
+    margin-left: 0 !important;
+  }
+}
 
 @media(max-width: 720px) {
   .container {
