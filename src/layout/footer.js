@@ -55,7 +55,7 @@ const Footer = () =>
       </section>
 
       <section className={footerStyles.sectionE}>
-        <ul>
+        <ul className={footerStyles.mobilelinklist}>
           <li>
             <Link to="/">
               Home
