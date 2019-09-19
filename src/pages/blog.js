@@ -27,7 +27,7 @@ const BlogPage = () => {
               xtra_img {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 710) {
+                    fluid(maxWidth: 500) {
                       src
                     }
                   }
