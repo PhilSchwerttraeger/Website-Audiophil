@@ -7,8 +7,9 @@ import Chip from "@material-ui/core/Chip"
 import { navigate } from "gatsby"
 import blogPostStyling from "./blogpost.module.scss"
 
-import parse from 'html-react-parser'
+import back from "../images/backArrowWhiteS.png"
 
+import parse from 'html-react-parser'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -132,7 +133,7 @@ const blogpost = ({ data }) => {
           <Grid item>
             <div className={blogPostStyling.back}>
               <Link to="/blog">
-                <span>&#x2B11; zurück</span>
+                <span><img src={back} width="12px" /> zurück</span>
               </Link>
             </div>
             <h1 className={blogPostStyling.heading} dangerouslySetInnerHTML={{ __html: data.wordpressPost.title }}>
