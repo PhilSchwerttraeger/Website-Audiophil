@@ -150,7 +150,7 @@ const blogpost = ({ data }) => {
                   label={category.name}
                   clickable
                   onClick={() => navigate(`/category/${category.slug}`)}
-                  style={{ color: "#597F97", marginRight: "5px" }}
+                  style={{ color: "#597F97", marginRight: "3px", marginTop: "3px" }}
                 />
               )
             })}
