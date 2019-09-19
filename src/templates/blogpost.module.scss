@@ -24,6 +24,7 @@
 .heading {
   color: $ternary;
   font-size: 48px;
+  word-break: break-word;
 }
 @media(max-width: 600px) {
   .heading {
