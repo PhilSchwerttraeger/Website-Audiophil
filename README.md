@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.audiophilproduction.de">
-    <img alt="audiophil" src="./images/icon.png" width="60" />
+    <img alt="audiophil" src="./src/images/icon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
